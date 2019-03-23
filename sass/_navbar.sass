@@ -1,0 +1,32 @@
+.navbar 
+	background-image: url('../img/background.jpg') 
+	border: 1px solid black
+	border-bottom: 3px solid black
+	min-height: 40px
+
+.navbar_links
+	display: flex
+	list-style: none
+	padding: 0
+
+.navbar_links li 
+	border: none
+	border-left: 1px solid #949494
+	width: 20%
+	text-align: center
+	margin: 0
+
+.navbar_links li:last-of-type
+	border-right: 1px solid #949494
+
+.navbar_links a 
+	+bolt
+	text-transform: uppercase
+	color: #949494
+	font-size: 17px
+	text-decoration: none
+	transition-duration: 0.5s 
+
+.navbar_links a:hover 
+	color: white
+	transition-duration: 0.5s 
