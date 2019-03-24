@@ -18,6 +18,15 @@ font-weight: normal;
 font-style: normal;
 }
 
+@font-face {
+font-family: 'Queen Rosie Regular';
+src: url('../fonts/QueenRosie.eot');
+src: url('../fonts/QueenRosie.eot?#iefix') format('embedded-opentype'),
+url('../fonts/QueenRosie.woff') format('woff'),
+url('../fonts/QueenRosie.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
 
 @mixin bolt {
 	font-family: 'Proxima Nova Semibold', sans-serif;
@@ -25,4 +34,8 @@ font-style: normal;
 
 @mixin light {
 	font-family: 'Proxima Nova Light', sans-serif;
+}
+
+@mixin regular {
+	font-family: 'Queen Rosie Regular', sans-serif;
 }

@@ -1,32 +1,109 @@
-.navbar 
-	background-image: url('../img/background.jpg') 
+.header
+	background-image: url('../img/background.jpg')
 	border: 1px solid black
 	border-bottom: 3px solid black
-	min-height: 40px
+	position: fixed
+	width: 100%
+	top: 0
 
-.navbar_links
-	display: flex
-	list-style: none
-	padding: 0
+	.navbar_links
+		list-style: none
+		padding: 0
+		display: flex
+		justify-content: space-between
+		align-items: center
+		text-align: center
 
-.navbar_links li 
-	border: none
-	border-left: 1px solid #949494
-	width: 20%
-	text-align: center
-	margin: 0
+	.navbar_links li
+		border-right: 1px solid #babbbb
+		width: 20% 
 
-.navbar_links li:last-of-type
-	border-right: 1px solid #949494
+	.navbar_links li:first-of-type
+		border-left: 1px solid #babbbb
+		
+	.navbar_links a,
+	.menu_phone a
+		+bolt
+		color: #949494
+		text-decoration: none
+		font-size: 20px
+		transition-duration: 0.3s
 
-.navbar_links a 
-	+bolt
-	text-transform: uppercase
-	color: #949494
-	font-size: 17px
-	text-decoration: none
-	transition-duration: 0.5s 
+	.navbar_links a:hover
+		color: white
+		transition-duration: 0.3s
 
-.navbar_links a:hover 
+	.menu_phone
+		position: absolute
+		background-image: url('../img/background.jpg')
+		width: 100%
+		left: 0
+		transform: translateY(-100%)
+		transition-duration: 0.3s
+		opacity: 0
+
+	.menu_phone ul
+		list-style: none
+		text-align: center
+		padding: 0
+
+	.menu_phone ul li 
+		padding-top: 10px
+
+label
+	color: black
+	cursor: pointer
+	position: absolute
+	right: 5%
+	margin-top: 25px
+
+input, label,
+	display: none
+
+input:checked ~ label
 	color: white
-	transition-duration: 0.5s 
+	z-index: 1
+	
+input:checked ~ .header .menu_phone 
+	transform: translateY(0%)
+	opacity: 1
+	transition-duration: 0.3s
+
+@media (max-width: 1199px)
+	
+@media (max-width: 991px)
+
+@media (max-width: 768px)
+	
+@media (max-width: 650px)
+	.header
+		border: none
+
+	.navbar 
+		display: none
+
+label
+	display: block
+	
+
+
+
+	
+	
+
+		
+
+
+
+		
+
+
+
+
+
+
+	
+
+	
+		
+
