@@ -112,24 +112,25 @@ body {
   padding-top: 10px;
 }
 
-label {
+label[for="menu"] {
   color: black;
   cursor: pointer;
   position: absolute;
   right: 5%;
   margin-top: 25px;
-}
-
-input, label {
   display: none;
 }
 
-input:checked ~ label {
+input[id="menu"], label[for="menu"] {
+  display: none;
+}
+
+input[id="menu"]:checked ~ label[for="menu"] {
   color: white;
   z-index: 1;
 }
 
-input:checked ~ .header .menu_phone {
+input[id="menu"]:checked ~ .header .menu_phone {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
   opacity: 1;
@@ -145,9 +146,94 @@ input:checked ~ .header .menu_phone {
   .navbar {
     display: none;
   }
+
+  label[for="menu"] {
+    display: block;
+  }
 }
-label {
+.hero_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+.hero .phone_number {
+  font-family: 'Proxima Nova Semibold', sans-serif;
   display: block;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.hero .phone_description {
+  text-align: center;
+}
+.hero_title {
+  font-family: 'Queen Rosie Regular', sans-serif;
+  text-align: center;
+}
+.hero_title h1 {
+  font-size: 45px;
+}
+.hero_title h1:first-letter {
+  font-size: 65px;
+}
+.hero_search form {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+.hero_search input {
+  width: 70%;
+}
+
+@media (max-width: 991px) {
+  .hero_wrap {
+    margin-top: 40px;
+  }
+  .hero_title h1 {
+    font-size: 35px;
+    text-align: center;
+  }
+  .hero_title h1:first-letter {
+    font-size: 55px;
+  }
+  .hero .phone_number {
+    font-size: 16px;
+  }
+  .hero .phone_description {
+    font-size: 12px;
+  }
+  .hero_search input {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  .hero_phone, .hero_search {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  .hero_wrap {
+    margin: 0px;
+  }
+
+  .hero_title h1 {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

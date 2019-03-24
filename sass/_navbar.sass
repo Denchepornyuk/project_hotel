@@ -50,21 +50,23 @@
 	.menu_phone ul li 
 		padding-top: 10px
 
-label
+label[for="menu"]
 	color: black
 	cursor: pointer
 	position: absolute
 	right: 5%
 	margin-top: 25px
-
-input, label,
 	display: none
 
-input:checked ~ label
+
+input[id="menu"], label[for="menu"],
+	display: none
+
+input[id="menu"]:checked ~ label[for="menu"]
 	color: white
 	z-index: 1
 	
-input:checked ~ .header .menu_phone 
+input[id="menu"]:checked ~ .header .menu_phone 
 	transform: translateY(0%)
 	opacity: 1
 	transition-duration: 0.3s
@@ -82,8 +84,8 @@ input:checked ~ .header .menu_phone
 	.navbar 
 		display: none
 
-label
-	display: block
+	label[for="menu"]
+		display: block
 	
 
 

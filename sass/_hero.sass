@@ -1,0 +1,77 @@
+.hero_wrap
+	display: flex
+	justify-content: space-around
+	align-items: center
+	margin-top: 30px
+
+
+.hero
+	.phone_number
+		+bolt
+		display: block
+		font-size: 20px
+		letter-spacing: 1px
+	
+	.phone_description
+		text-align: center
+
+	&_title
+		+regular
+		text-align: center
+	
+	&_title h1 
+		font-size: 45px
+	
+	&_title h1:first-letter
+		font-size: 65px
+
+	&_search form
+		margin-top: 15px
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 0
+	
+	&_search input
+		width: 70%
+
+@media (max-width: 1199px)
+	
+
+
+@media (max-width: 991px)
+	.hero
+		&_wrap
+			margin-top: 40px
+
+		&_title h1
+			font-size: 35px
+			text-align: center
+
+		&_title h1:first-letter
+			font-size: 55px
+
+
+		.phone_number
+			font-size: 16px
+			
+		.phone_description
+			font-size: 12px
+
+		&_search input
+			width: 60%
+
+@media (max-width: 768px)
+	.hero
+		&_phone, &_search
+			display: none
+
+
+
+@media (max-width: 650px)
+	.hero_wrap
+		margin: 0px
+
+	.hero_title h1
+		margin: 0
+
