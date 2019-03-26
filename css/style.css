@@ -249,30 +249,37 @@ input[id="menu"]:checked ~ .header .menu__phone {
   border-radius: 50px 50px;
 }
 .portfolio__collection {
-  height: 350px;
-  margin: 50px auto 0;
-  position: relative;
-  width: 700px;
-}
-.portfolio__collection > input {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  min-height: inherit;
 }
 .portfolio .slider {
-  background-color: #ddd;
-  height: inherit;
+  max-height: 450px;
   overflow: hidden;
-  position: relative;
-  width: inherit;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid red;
 }
-.portfolio .slides {
-  height: inherit;
-  position: absolute;
-  width: inherit;
+.portfolio .slide {
+  width: 70%;
+  max-height: 450px;
+  border-radius: 50px 50px;
+  overflow: hidden;
 }
-.portfolio .slide1 {
-  background-image: url("../img/portfolio/4.jpg");
+.portfolio .slide img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.portfolio .arrow {
+  color: white;
+  font-size: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

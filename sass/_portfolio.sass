@@ -10,37 +10,31 @@
 		border-radius: 50px 50px
 		
 	&__collection
-		height: 350px
-		margin: 50px auto 0
-		position: relative
-		width: 700px
-		//display: flex
-		//align-items: center
-		//justify-content: center
-		//width: 100%
-		//background-image: url("../img/background.jpg")
-		//min-height: 500px
-		//border: 2px solid black
-		//border-radius: 50px 50px
-	
-	&__collection > input
-		display: none
+		display: flex
+		align-items: center
+		justify-content: space-around
+		width: 100%
+		min-height: inherit
 
-	.slider 
-		background-color: #ddd
-		height: inherit
+	.slider
+		max-height: 450px
 		overflow: hidden
-		position: relative
-		width: inherit
-		box-shadow: 0 0 20px rgba(0, 0, 0, .5)
+		border: 1px solid red
+	
+	.slide
+		width: 70%
+		max-height: 450px
+		border-radius: 50px 50px
+		overflow: hidden
 
-	.slides
-		height: inherit
-		position: absolute
-		width: inherit
+	.slide img
+		width: 100%
+		height: auto
+		object-fit: cover
 
-	.slide1
-		background-image: url('../img/portfolio/4.jpg')
+	.arrow	
+		color: white
+		font-size: 50px
 		
 
 	
