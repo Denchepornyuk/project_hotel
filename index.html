@@ -14,14 +14,14 @@
 </head>
 <body>
 	
-	<input type="checkbox" name="toggle" id="menu" class="toggle_menu">
+	<input type="checkbox" name="toggle" id="menu" class="toggle__menu">
 	<label for="menu"><i class="fas fa-bars"></i></label>
 	<header class="header">
 		<div class="container">
-			<div class="menu_phone">
+			<div class="menu__phone">
 				<ul>
 					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
+					<li><a href="#about">About</a></li>
 					<li><a href="#">Services</a></li>
 					<li><a href="#">Blog</a></li>
 					<li><a href="#">Rooms</a></li>
@@ -29,9 +29,9 @@
 				</ul>
 			</div>
 			<nav class="navbar">
-				<ul class="navbar_links">
+				<ul class="navbar__links">
 					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
+					<li><a href="#about">About</a></li>
 					<li><a href="#">Services</a></li>
 					<li><a href="#">Blog</a></li>
 					<li><a href="#">Rooms</a></li>
@@ -43,22 +43,55 @@
 	
 	<main>
 		<section class="hero">
-			<div class="container hero_wrap">
-				<div class="hero_phone">
-					<span class="phone_number">+1(234)567-8901</span>
-					<span class="phone_description">Your first visit? Call for info</span>
+			<div class="container hero--wrap">
+				<div class="hero__phone">
+					<span class="phone__number">+1(234)567-8901</span>
+					<span class="phone__description">Your first visit? Call for info</span>
 				</div>
-				<div class="hero_title">
+				<div class="hero__title">
 					<h1>Grand Hotel</h1>
 				</div>
-				<div class="hero_search">
+				<div class="hero__search">
 					<form>
 						<input type="search" name='search' placeholder="Search...">
-						<button class='search_button'>
+						<button class='search__button'>
 							<i class="fas fa-search"></i>
 						</button>
 					</form>
 				</div>
+			</div>
+		</section>
+
+		<section class="portfolio">
+			<div class="container portfolio--wrap">
+				<div class="portfolio__collection">
+					<input type="radio" name="point" id="slide1" checked>
+					<input type="radio" name="point" id="slide2">
+					<input type="radio" name="point" id="slide3">
+					<input type="radio" name="point" id="slide4">
+					<input type="radio" name="point" id="slide5">
+					<div class="slider">
+						<div class="slides slide1"></div>
+						<div class="slides slide2"></div>
+						<div class="slides slide3"></div>
+						<div class="slides slide4"></div>
+						<div class="slides slide5"></div>
+					</div>	
+					<div class="controls">
+						<label for="slide1"></label>
+						<label for="slide2"></label>
+						<label for="slide3"></label>
+						<label for="slide4"></label>
+						<label for="slide5"></label>
+					</div>
+				</div>
+			</div> 
+		</section>
+
+		<section id="about" class="about">
+			<div class="container">
+				<h2>About</h2>
+				<p></p>
 			</div>
 		</section>
 	</main>

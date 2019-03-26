@@ -26,6 +26,7 @@
 
 body {
   font-family: 'Proxima Nova Light', sans-serif;
+  background-color: #ADADAD;
 }
 
 .container {
@@ -57,7 +58,7 @@ body {
   width: 100%;
   top: 0;
 }
-.header .navbar_links {
+.header .navbar__links {
   list-style: none;
   padding: 0;
   display: -webkit-box;
@@ -71,15 +72,15 @@ body {
           align-items: center;
   text-align: center;
 }
-.header .navbar_links li {
+.header .navbar__links li {
   border-right: 1px solid #babbbb;
   width: 20%;
 }
-.header .navbar_links li:first-of-type {
+.header .navbar__links li:first-of-type {
   border-left: 1px solid #babbbb;
 }
-.header .navbar_links a,
-.header .menu_phone a {
+.header .navbar__links a,
+.header .menu__phone a {
   font-family: 'Proxima Nova Semibold', sans-serif;
   color: #949494;
   text-decoration: none;
@@ -87,12 +88,12 @@ body {
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
-.header .navbar_links a:hover {
+.header .navbar__links a:hover {
   color: white;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
-.header .menu_phone {
+.header .menu__phone {
   position: absolute;
   background-image: url("../img/background.jpg");
   width: 100%;
@@ -103,12 +104,12 @@ body {
           transition-duration: 0.3s;
   opacity: 0;
 }
-.header .menu_phone ul {
+.header .menu__phone ul {
   list-style: none;
   text-align: center;
   padding: 0;
 }
-.header .menu_phone ul li {
+.header .menu__phone ul li {
   padding-top: 10px;
 }
 
@@ -130,7 +131,7 @@ input[id="menu"]:checked ~ label[for="menu"] {
   z-index: 1;
 }
 
-input[id="menu"]:checked ~ .header .menu_phone {
+input[id="menu"]:checked ~ .header .menu__phone {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
   opacity: 1;
@@ -149,9 +150,10 @@ input[id="menu"]:checked ~ .header .menu_phone {
 
   label[for="menu"] {
     display: block;
+    font-size: 20px;
   }
 }
-.hero_wrap {
+.hero--wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,26 +165,26 @@ input[id="menu"]:checked ~ .header .menu_phone {
   margin-top: 30px;
 }
 
-.hero .phone_number {
+.hero .phone__number {
   font-family: 'Proxima Nova Semibold', sans-serif;
   display: block;
   font-size: 20px;
   letter-spacing: 1px;
 }
-.hero .phone_description {
+.hero .phone__description {
   text-align: center;
 }
-.hero_title {
+.hero__title {
   font-family: 'Queen Rosie Regular', sans-serif;
   text-align: center;
 }
-.hero_title h1 {
+.hero__title h1 {
   font-size: 45px;
 }
-.hero_title h1:first-letter {
+.hero__title h1:first-letter {
   font-size: 65px;
 }
-.hero_search form {
+.hero__search form {
   margin-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -196,44 +198,81 @@ input[id="menu"]:checked ~ .header .menu_phone {
           align-items: center;
   padding: 0;
 }
-.hero_search input {
-  width: 70%;
+.hero__search input {
+  width: 80%;
 }
 
 @media (max-width: 991px) {
-  .hero_wrap {
+  .hero--wrap {
     margin-top: 40px;
   }
-  .hero_title h1 {
+  .hero__title h1 {
     font-size: 35px;
     text-align: center;
   }
-  .hero_title h1:first-letter {
+  .hero__title h1:first-letter {
     font-size: 55px;
   }
-  .hero .phone_number {
+  .hero .phone__number {
     font-size: 16px;
   }
-  .hero .phone_description {
+  .hero .phone__description {
     font-size: 12px;
   }
-  .hero_search input {
+  .hero__search input {
     width: 60%;
   }
 }
 @media (max-width: 768px) {
-  .hero_phone, .hero_search {
+  .hero__phone, .hero__search {
     display: none;
   }
 }
 @media (max-width: 650px) {
-  .hero_wrap {
+  .hero--wrap {
     margin: 0px;
   }
 
-  .hero_title h1 {
+  .hero__title h1 {
     margin: 0;
+    margin-right: 25px;
   }
+}
+.portfolio {
+  min-height: 500px;
+}
+.portfolio .portfolio--wrap {
+  min-height: 500px;
+  width: 100%;
+  background-image: url("../img/background.jpg");
+  border: 2px solid black;
+  border-radius: 50px 50px;
+}
+.portfolio__collection {
+  height: 350px;
+  margin: 50px auto 0;
+  position: relative;
+  width: 700px;
+}
+.portfolio__collection > input {
+  display: none;
+}
+.portfolio .slider {
+  background-color: #ddd;
+  height: inherit;
+  overflow: hidden;
+  position: relative;
+  width: inherit;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.portfolio .slides {
+  height: inherit;
+  position: absolute;
+  width: inherit;
+}
+.portfolio .slide1 {
+  background-image: url("../img/portfolio/4.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */

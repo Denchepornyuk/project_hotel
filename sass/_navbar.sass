@@ -6,7 +6,7 @@
 	width: 100%
 	top: 0
 
-	.navbar_links
+	.navbar__links
 		list-style: none
 		padding: 0
 		display: flex
@@ -14,26 +14,26 @@
 		align-items: center
 		text-align: center
 
-	.navbar_links li
+	.navbar__links li
 		border-right: 1px solid #babbbb
 		width: 20% 
 
-	.navbar_links li:first-of-type
+	.navbar__links li:first-of-type
 		border-left: 1px solid #babbbb
 		
-	.navbar_links a,
-	.menu_phone a
+	.navbar__links a,
+	.menu__phone a
 		+bolt
 		color: #949494
 		text-decoration: none
 		font-size: 20px
 		transition-duration: 0.3s
 
-	.navbar_links a:hover
+	.navbar__links a:hover
 		color: white
 		transition-duration: 0.3s
 
-	.menu_phone
+	.menu__phone
 		position: absolute
 		background-image: url('../img/background.jpg')
 		width: 100%
@@ -42,12 +42,12 @@
 		transition-duration: 0.3s
 		opacity: 0
 
-	.menu_phone ul
+	.menu__phone ul
 		list-style: none
 		text-align: center
 		padding: 0
 
-	.menu_phone ul li 
+	.menu__phone ul li 
 		padding-top: 10px
 
 label[for="menu"]
@@ -66,7 +66,7 @@ input[id="menu"]:checked ~ label[for="menu"]
 	color: white
 	z-index: 1
 	
-input[id="menu"]:checked ~ .header .menu_phone 
+input[id="menu"]:checked ~ .header .menu__phone 
 	transform: translateY(0%)
 	opacity: 1
 	transition-duration: 0.3s
@@ -86,26 +86,4 @@ input[id="menu"]:checked ~ .header .menu_phone
 
 	label[for="menu"]
 		display: block
-	
-
-
-
-	
-	
-
-		
-
-
-
-		
-
-
-
-
-
-
-	
-
-	
-		
-
+		font-size: 20px

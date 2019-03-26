@@ -1,4 +1,4 @@
-.hero_wrap
+.hero--wrap
 	display: flex
 	justify-content: space-around
 	align-items: center
@@ -6,34 +6,34 @@
 
 
 .hero
-	.phone_number
+	.phone__number
 		+bolt
 		display: block
 		font-size: 20px
 		letter-spacing: 1px
 	
-	.phone_description
+	.phone__description
 		text-align: center
 
-	&_title
+	&__title
 		+regular
 		text-align: center
 	
-	&_title h1 
+	&__title h1 
 		font-size: 45px
 	
-	&_title h1:first-letter
+	&__title h1:first-letter
 		font-size: 65px
 
-	&_search form
+	&__search form
 		margin-top: 15px
 		display: flex
 		flex-direction: column
 		align-items: center
 		padding: 0
 	
-	&_search input
-		width: 70%
+	&__search input
+		width: 80%
 
 @media (max-width: 1199px)
 	
@@ -41,37 +41,37 @@
 
 @media (max-width: 991px)
 	.hero
-		&_wrap
+		&--wrap
 			margin-top: 40px
 
-		&_title h1
+		&__title h1
 			font-size: 35px
 			text-align: center
 
-		&_title h1:first-letter
+		&__title h1:first-letter
 			font-size: 55px
 
 
-		.phone_number
+		.phone__number
 			font-size: 16px
 			
-		.phone_description
+		.phone__description
 			font-size: 12px
 
-		&_search input
+		&__search input
 			width: 60%
 
 @media (max-width: 768px)
 	.hero
-		&_phone, &_search
+		&__phone, &__search
 			display: none
 
 
 
 @media (max-width: 650px)
-	.hero_wrap
+	.hero--wrap
 		margin: 0px
 
-	.hero_title h1
+	.hero__title h1
 		margin: 0
-
+		margin-right: 25px
