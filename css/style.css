@@ -255,31 +255,99 @@ input[id="menu"]:checked ~ .header .menu__phone {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   min-height: inherit;
 }
+.portfolio .slider input {
+  display: none;
+}
 .portfolio .slider {
-  max-height: 450px;
-  overflow: hidden;
-  border: 1px solid red;
-}
-.portfolio .slide {
   width: 70%;
-  max-height: 450px;
+  position: relative;
+  text-align: center;
+}
+.portfolio .slide1 {
+  background: url("../img/portfolio/1.jpg");
+}
+.portfolio .slide2 {
+  background: url("../img/portfolio/2.jpg");
+}
+.portfolio .slide3 {
+  background: url("../img/portfolio/3.jpg");
+}
+.portfolio .slide4 {
+  background: url("../img/portfolio/4.jpg");
+}
+.portfolio .slide5 {
+  background: url("../img/portfolio/5.jpg");
+}
+.portfolio .images div {
+  width: 20%;
+  min-height: 450px;
+  float: left;
   border-radius: 50px 50px;
+  background-size: cover;
+}
+.portfolio .images {
+  width: 500%;
+  line-height: 0;
+}
+.portfolio .slides--wrap {
   overflow: hidden;
 }
-.portfolio .slide img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+.portfolio #toggle1:checked ~ .switches label[for="toggle5"],
+.portfolio #toggle2:checked ~ .switches label[for="toggle1"],
+.portfolio #toggle3:checked ~ .switches label[for="toggle2"],
+.portfolio #toggle4:checked ~ .switches label[for="toggle3"],
+.portfolio #toggle5:checked ~ .switches label[for="toggle4"] {
+  background: url("../img/portfolio/arrow-circle-left-solid.svg") no-repeat;
+  position: absolute;
+  left: -10%;
+  top: 40%;
+  height: 54px;
+  width: 54px;
 }
-.portfolio .arrow {
-  color: white;
-  font-size: 50px;
+.portfolio #toggle1:checked ~ .switches label[for="toggle2"],
+.portfolio #toggle2:checked ~ .switches label[for="toggle3"],
+.portfolio #toggle3:checked ~ .switches label[for="toggle4"],
+.portfolio #toggle4:checked ~ .switches label[for="toggle5"],
+.portfolio #toggle5:checked ~ .switches label[for="toggle1"] {
+  background: url("../img/portfolio/arrow-circle-right-solid.svg") no-repeat;
+  position: absolute;
+  right: -10%;
+  top: 40%;
+  height: 54px;
+  width: 54px;
+}
+.portfolio #toggle1:checked ~ .slides .images {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.portfolio #toggle2:checked ~ .slides .images {
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+}
+.portfolio #toggle3:checked ~ .slides .images {
+  -webkit-transform: translateX(-40%);
+          transform: translateX(-40%);
+}
+.portfolio #toggle4:checked ~ .slides .images {
+  -webkit-transform: translateX(-60%);
+          transform: translateX(-60%);
+}
+.portfolio #toggle5:checked ~ .slides .images {
+  -webkit-transform: translateX(-80%);
+          transform: translateX(-80%);
+}
+.portfolio .switches label {
+  cursor: pointer;
+}
+.portfolio .slides .images {
+  -webkit-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 /*# sourceMappingURL=style.css.map */
