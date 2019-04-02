@@ -1,10 +1,11 @@
 .header
 	background-image: url('../img/background.jpg')
 	border: 1px solid black
-	border-bottom: 3px solid black
+	border-bottom: 3px solid grey
 	position: fixed
 	width: 100%
 	top: 0
+	z-index: 1
 
 	.navbar__links
 		list-style: none
@@ -64,7 +65,7 @@ input[id="menu"], label[for="menu"],
 
 input[id="menu"]:checked ~ label[for="menu"]
 	color: white
-	z-index: 1
+	z-index: 2
 	
 input[id="menu"]:checked ~ .header .menu__phone 
 	transform: translateY(0%)
