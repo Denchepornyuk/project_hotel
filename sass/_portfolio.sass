@@ -27,13 +27,12 @@
 		padding-left: 1px
 		float: left
 
-
 	.slides .images
 		width: 500%
 		line-height: 0
 
 	.overflow
-		width: 85%
+		width: 65%
 		max-height: 430px
 		margin: auto
 		border-radius: 50px 50px
@@ -53,7 +52,6 @@
 		height: 40px
 		width: 40px
 		display: inline-block
-
 
 	
 	#toggle1:checked ~ .switches label:nth-child(2), 
@@ -108,10 +106,13 @@
 
 
 	@media (max-width: 1199px)
-		.switches
-			width: 15%
+		.overflow
+			width: 80%
 
 	@media (max-width: 991px)
+		.overflow
+			width: 90%
+
 		.switches
 			width: 20%
 		
@@ -142,7 +143,7 @@
 			background: none
 
 		.switches
-			width: 40%
+			width: 30%
 
 		.images div
 			margin-top: 10px
