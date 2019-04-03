@@ -121,6 +121,7 @@ label[for="menu"] {
   right: 5%;
   margin-top: 25px;
   display: none;
+  z-index: 2;
 }
 
 input[id="menu"], label[for="menu"] {
@@ -182,6 +183,7 @@ input[id="menu"]:checked ~ .header .menu__phone {
 .hero__title h1 {
   font-size: 45px;
   text-align: center;
+  margin-bottom: 10px;
   padding-left: 10%;
   word-wrap: normal;
 }
@@ -246,7 +248,7 @@ input[id="menu"]:checked ~ .header .menu__phone {
   }
 }
 .portfolio {
-  min-height: 500px;
+  min-height: 525px;
 }
 .portfolio .portfolio--wrap {
   min-height: inherit;
@@ -270,7 +272,6 @@ input[id="menu"]:checked ~ .header .menu__phone {
 }
 .portfolio .slider {
   position: relative;
-  text-align: center;
 }
 .portfolio .slider {
   margin: 0 auto;
@@ -285,9 +286,10 @@ input[id="menu"]:checked ~ .header .menu__phone {
   line-height: 0;
 }
 .portfolio .overflow {
-  width: 65%;
-  max-height: 430px;
+  width: 70%;
+  max-height: 450px;
   margin: auto;
+  margin-top: 15px;
   border-radius: 50px 50px;
   overflow: hidden;
 }
@@ -392,9 +394,10 @@ input[id="menu"]:checked ~ .header .menu__phone {
     min-height: 0;
     border: none;
     background: none;
+    padding: 0;
   }
   .portfolio .switches {
-    width: 30%;
+    width: 27%;
   }
   .portfolio .images div {
     margin-top: 10px;
