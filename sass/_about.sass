@@ -1,5 +1,32 @@
 
 .about
-	+regular
-	display: flex
-	justify-content: center
+	margin-top: 10px
+	color: white
+
+	&__title
+		+regular
+		text-align: center
+		font-size: 25px
+
+	&--content
+		display: flex
+		justify-content: space-around
+		align-items: center
+		width: 95%
+		margin: auto	
+
+	&__description
+		font-size: 18px
+		width: 60%
+
+	&__description span
+		+bolt
+		text-decoration: underline
+		font-size: 20px
+	
+	&__logo img
+		border-radius: 50px 50px
+		width: 400px
+		height: 300px
+		border: 2px solid gray
+	

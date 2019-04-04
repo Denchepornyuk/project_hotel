@@ -1,11 +1,10 @@
-.hero--wrap
-	display: flex
-	justify-content: space-around
-	align-items: center
-	margin-top: 30px
-
-
 .hero
+	&--wrap
+		display: flex
+		justify-content: space-around
+		align-items: center
+		margin-top: 30px
+
 	.phone__number
 		+bolt
 		display: block
@@ -45,7 +44,7 @@
 
 @media (max-width: 991px)
 	.hero
-		&--wrap
+		.wrap
 			margin-top: 40px
 
 		&__title h1
@@ -66,6 +65,7 @@
 			width: 60%
 
 @media (max-width: 768px)
+
 	.hero
 		&__phone, &__search
 			display: none
@@ -77,6 +77,9 @@
 
 @media (max-width: 650px)
 	.hero--wrap
+		margin-top: 0
+		
+	.wrap
 		margin: 0px
 
 	.hero__title h1

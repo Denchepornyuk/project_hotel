@@ -1,12 +1,9 @@
 .portfolio
 	min-height: 525px
 	
-	.portfolio--wrap
+	.portfolio .wrap
 		min-height: inherit
 		width: 100%
-		background-image: url("../img/background.jpg")
-		border: 2px solid grey
-		border-radius: 50px 50px
 		
 	&__collection
 		display: flex
@@ -23,7 +20,6 @@
 
 	.images div 
 		width: 20%
-		padding-left: 1px
 		float: left
 
 	.slides .images
@@ -92,7 +88,6 @@
 	#toggle5:checked ~ .slides .images
 		transform: translateX(-80%)
 
-
 	.switches
 		width: 10%
 		margin: auto
@@ -117,7 +112,7 @@
 
 	@media (max-width: 768px)
 		
-		.portfolio--wrap
+		.wrap
 			border-radius: 0
 
 		.images div
@@ -135,7 +130,7 @@
 		.container
 			padding: 0
 
-		.portfolio--wrap
+		.wrap
 			min-height: 0
 			border: none
 			background: none
