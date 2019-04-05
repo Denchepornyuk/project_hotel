@@ -1,0 +1,54 @@
+.services
+	color: white
+
+	&__title
+		+regular
+		text-align: center
+		font-size: 25px
+
+	&__list
+		margin: 0
+		padding: 0
+		list-style: none
+		display: flex
+		justify-content: space-around
+		align-items: center
+		flex-wrap: wrap
+
+	&__list li
+		width: 350px
+		position: relative
+		overflow: hidden
+		border-radius: 50px 50px
+		
+	&__list img
+		max-width: 100%
+		height: 230px
+
+	&__list--description
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 100%
+		border-radius: 50px 50px
+		background-color: rgba(0,0,0, .5)
+		padding: 80px
+		text-align: center
+		+bolt
+		font-size: 20px
+		transition: all .35s
+
+	&__list--description a
+		text-transform: uppercase
+		font-size: 13px
+		display: block
+		margin-top: 50px
+		color: white
+		text-decoration: none
+		border: 1px solid white
+		padding: 10px
+		border-radius: 50px 50px
+
+	&__list li:hover > .services__list--description
+		top: 0%
+

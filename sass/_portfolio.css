@@ -1,8 +1,7 @@
 .portfolio {
   min-height: 525px; }
-  .portfolio .portfolio .wrap {
-    min-height: inherit;
-    width: 100%; }
+  .portfolio .wrap {
+    margin-top: 0; }
   .portfolio__collection {
     display: flex;
     align-items: center;
