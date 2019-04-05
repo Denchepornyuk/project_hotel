@@ -56,6 +56,10 @@ body {
     max-width: 100%;
     padding: 0 30px;
   }
+
+  .wrap {
+    border-radius: 0;
+  }
 }
 .header {
   background-image: url("../img/background.jpg");
@@ -379,9 +383,6 @@ input[id="menu"]:checked ~ .header .menu__phone {
   }
 }
 @media (max-width: 768px) {
-  .portfolio .wrap {
-    border-radius: 0;
-  }
   .portfolio .images div {
     background-size: 100%;
   }
@@ -462,9 +463,6 @@ input[id="menu"]:checked ~ .header .menu__phone {
   }
 }
 @media (max-width: 768px) {
-  .about .wrap {
-    border-radius: 0;
-  }
   .about__description {
     width: 70%;
   }
@@ -560,6 +558,51 @@ input[id="menu"]:checked ~ .header .menu__phone {
 }
 .services__list li:hover > .services__list--description {
   top: 0%;
+}
+.services__list--description a:hover {
+  border: 1px solid red;
+  color: red;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.services .information {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background-color: gray;
+}
+.services li:hover {
+  overflow: none;
+}
+
+@media (max-width: 991px) {
+  .services__list--description {
+    top: 0%;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 40px;
+    font-size: 25px;
+  }
+  .services__list--description a {
+    font-size: 15px;
+    color: yellow;
+    border: 1px solid yellow;
+    font-family: 'Proxima Nova Semibold', sans-serif;
+  }
+}
+@media (max-width: 768px) {
+  .services__list--description {
+    padding-top: 40px;
+    font-size: 25px;
+  }
+}
+@media (max-width: 650px) {
+  .services__list--description a {
+    margin-top: 40px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
