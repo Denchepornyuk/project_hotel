@@ -7,15 +7,16 @@
 
 	&__phone
 		width: 20%
+		+bolt
 
 	.phone__number
-		+bolt
 		display: block
 		font-size: 20px
 		letter-spacing: 1px
 	
 	.phone__description
 		text-align: center
+
 
 	&__title
 		+regular
@@ -24,6 +25,7 @@
 		font-size: 45px
 		text-align: center
 		word-wrap: normal
+		margin-bottom: 10px
 
 	&__title h1:first-letter
 		font-size: 65px
@@ -47,11 +49,10 @@
 
 @media (max-width: 991px)
 	.hero
-		.wrap
-			margin-top: 40px
 
 		&__title h1
 			font-size: 35px
+			margin-top: 30px
 			text-align: center
 
 		&__title h1:first-letter
@@ -81,9 +82,6 @@
 @media (max-width: 650px)
 	.hero--wrap
 		margin-top: 0
-
-	.wrap
-		margin: 0px
 
 	.hero__title h1
 		margin: 0
