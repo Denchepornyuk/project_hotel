@@ -34,8 +34,8 @@
 					<li><a href="#about">About</a></li>
 					<li><a href="#services">Services</a></li>
 					<li><a href="#gallery">Gallery</a></li>
-					<li><a href="#">Rooms</a></li>
-					<li><a href="#">Locations</a></li>
+					<li><a href="#rooms">Rooms</a></li>
+					<li><a href="#locations">Locations</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -45,7 +45,7 @@
 		<section class="hero">
 			<div class="container hero--wrap">
 				<div class="hero__phone">
-					<span class="phone__number">+1(234)567-8901</span>
+					<span class="phone__number">+(380) 12-345-6789</span>
 					<span class="phone__description">Your first visit? Call for info</span>
 				</div>
 				<div class="hero__title">
@@ -167,21 +167,20 @@
 		</section>
 
 		<section id="services" class="services">
+			<input type="radio" name="more" id="read-more1" class="open--infomation">
+			<input type="radio" name="more" id="read-more2" class="open--infomation">
+			<input type="radio" name="more" id="read-more3" class="open--infomation">
+			<input type="radio" name="more" id="read-more4" class="open--infomation">
+			<input type="radio" name="more" id="read-more5" class="open--infomation">
+			<input type="radio" name="more" id="read-more6" class="open--infomation">
+			<input type="radio" name="more" id="close">
 			<div class="container wrap">
 				<h2 class="services__title">Services</h2>
 				<ul class="services__list">
 					<li>
 						<div class="services__list--description">
 							<p>Beauty salon</p>
-							<a class="beauty_salon">read more</a>
-							<div class="information">
-								<p>
-									We have professionals with great experience and a great desire to 
-									make you even more beautiful and to bring a good mood. Оur prices are the
-								  best in the ratio of the price of the service and the quality level of 
-									service.
-								</p>
-							</div>
+							<label class='read--button' for="read-more1">read more</label>
 						</div>
 						<img src="img/services/beauty_salon.png" alt="Beauty salon">
 					</li>
@@ -189,7 +188,7 @@
 					<li>
 						<div class="services__list--description">
 							<p>Parking</p>
-							<a class="parking">read more</a>
+							<label class='read--button' for="read-more2">read more</label>
 						</div>
 						<img src="img/services/parking.jpg" alt="Parking">
 					</li>
@@ -197,7 +196,7 @@
 					<li>
 						<div class="services__list--description">
 							<p>Wardrobe</p>
-							<a class="wardrobe">read more</a>
+							<label class='read--button' for="read-more3">read more</label>
 						</div>
 						<img src="img/services/Wardrobe.jpg" alt="Wardrobe">
 					</li>
@@ -205,7 +204,7 @@
 					<li>
 						<div class="services__list--description">
 							<p>Transfer</p>
-							<a class="transfer">read more</a>
+							<label class='read--button' for="read-more4">read more</label>
 						</div>
 						<img src="img/services/transfer.jpg" alt="Transfer">
 					</li>
@@ -213,7 +212,7 @@
 					<li>
 						<div class="services__list--description">
 							<p>Businss center</p>
-							<a class="business_center">read more</a>
+							<label class='read--button' for="read-more5">read more</label>
 						</div>
 						<img src="img/services/business_center.jpg" alt="Businss center">
 					</li>
@@ -221,12 +220,77 @@
 					<li>
 						<div class="services__list--description">
 							<p>Wi-fi</p>
-							<a class="wifi">read more</a>
+							<label class='read--button' for="read-more6">read more</label>
 						</div>
 						<img src="img/services/wifi.jpg" alt="Wi-fi">
 					</li>
-
 				</ul>
+				<div class="information">
+					<div class="information--block beauty-salon">
+						<label for="close" class="infomation--close">
+							<i class="far fa-times-circle"></i>
+						</label>
+						<p>	
+							We have professionals with great experience and a great desire to 
+							make you even more beautiful and to bring a good mood. Оur prices are the
+							best in the ratio of the price of the service and the quality level of 
+							service.
+						</p>
+					</div>
+					<div class="information--block parking">
+						<label for="close" class="infomation--close">
+							<i class="far fa-times-circle"></i>
+						</label>
+						<p>
+							«Ukraine» hotel offers a parking for 69 cars (50 UAH per car/ per day). 
+							Secure video parking 24 hours and there is a facility for buses and private 
+							cars. Parking is provided for Guests who live in the hotel or visit events or
+							restaurants in it. 
+						</p>
+					</div>
+					<div class="information--block wardrobe">
+						<label for="close" class="infomation--close">
+							<i class="far fa-times-circle"></i>
+						</label>
+						<p>
+							When you visit the «Ukraine» hotel or restaurant in it, you can leave your outerwear 
+							in the wardrobe, which is located in the lobby of the 1st floor. Opening hours are 
+							from 8:00 to 20:00.  
+						</p>
+					</div>
+					<div class="information--block transfer">
+						<label for="close" class="infomation--close">
+							<i class="far fa-times-circle"></i>
+						</label>
+						<p>
+							To make the trip of our Guests more comfortable taxi service is available for 24 hour.
+							Our receptionists are happy to arrange a comfortable Airport or Railway station pick up
+							for You.  
+						</p>
+					</div>
+					<div class="information--block businss-center">
+						<label for="close" class="infomation--close">
+							<i class="far fa-times-circle"></i>
+						</label>
+						<p>
+							The business center is at the ground floor of the hotel and equipped with 3 desk 
+							top PC’s with hi-tech facilities including Internet and complimentary WI-FI, where 
+							You can comfortably work or just browse the web and secretarial support including 
+							printing, photocopying and other duties required.  
+						</p>
+					</div>
+					<div class="information--block wi-fi">
+						<label for="close" class="infomation--close">
+							<i class="far fa-times-circle"></i>
+						</label>
+						<p>
+							There is free Wi-Fi Internet provided at the all area of the hotel (up to 10 Mbit/s). 
+							Each Guest can easily and quickly connect their device, and the speed of Wi-Fi will 
+							provide continuous access to the Internet.  
+						</p>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -251,6 +315,347 @@
 					<label for="photo7"></label>
 					<label for="photo8"></label>
 					<label for="photo9"></label>
+				</div>
+			</div>
+		</section>
+
+		<section id='rooms' class="booking">
+			<div class="container wrap">
+				<h2 class="booking__title">Booking room</h2>
+				<span class="booking__phone">+(380) 12-345-6789</span>
+				<div class="booking__room">
+					<form action="#" method="post">
+						<div class="booking__form">
+							<div class="personal_data">
+								<label for="name">Name</label>
+	       			 	<input type="text" id="name" name="name" required tabindex="1"
+	       			 				 placeholder="Vasya">
+
+	       			 	<label for="second_name">Second Name</label>
+	       			 	<input type="text" id="second_name" name="second_name" required tabindex="2"
+	       			 				 placeholder="Pupkin">
+
+	       			 	<label for="tel" title="+380()">Phone</label>
+	          		<input type="tel" id="tel" name="tel" pattern="[\+][3][8][0]\d{9}" 
+	          					 placeholder="+380111111111" required autocomplete='off' tabindex="3">
+
+	          		<label for="email">Email</label>
+	            	<input type="email" id="email" name="email" autocomplete='on'
+	            				 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" tabindex="4"
+	            				 required>
+							</div>
+
+							<input type="radio" name="room_type" id="standart">
+            	<input type="radio" name="room_type" id="economy">
+            	<input type="radio" name="room_type" id="deluxe">
+            	<input type="radio" name="room_type" id="suite">
+							<div class="type__rooms">
+								<span class="name__rooms">Type of room</span>
+	            	<label for="standart">Standart</label>
+	            	<label for="economy">Economy</label>
+	            	<label for="deluxe">Deluxe</label>
+	            	<label for="suite">Suite</label>
+							</div>
+						</div>
+
+						<div class="booking__block">
+							<div class="booking__day">
+								<div class="check__in">
+									<label for="first_day">Check in</label>
+									<input type="date" id='check_in' required>
+								</div>
+								<div class="check__out">
+									<label for="check_out">Check out</label>
+									<input type="date" id='check_out' required>
+								</div>	
+								<div class="guests__number">
+									<label for="guests">Guest(s)</label>
+									<input type="text" name="guests" id="guests" pattern="\d" required>
+								</div>
+								<div class="booking__button">
+									<input type="submit" value="Find room">
+								</div>		
+							</div>
+
+							<div class="view_rooms">
+								<div class="tabbed">
+									<input type="radio" name="tabs" id="tab_1" checked>
+									<label for="tab_1">Standart</label>
+									<input type="radio" name="tabs" id="tab_2">
+									<label for="tab_2">Economy</label>
+									<input type="radio" name="tabs" id="tab_3">
+									<label for="tab_3">Deluxe</label>
+									<input type="radio" name="tabs" id="tab_4">				
+									<label for="tab_4">Suite</label>
+
+									<div class="tabs">
+										<div class="standart_tab">
+												<table class="table_floors">
+													<tr>
+														<td colspan="15">
+															<span>Floor 1</span>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td>2</td>
+														<td class="book">3</td>
+														<td>4</td>
+														<td>5</td>
+														<td>6</td>
+														<td class="book">7</td>
+														<td class="book">8</td>
+														<td>9</td>
+														<td>10</td>
+														<td>11</td>
+														<td>12</td>
+														<td class="book">13</td>
+														<td>14</td>
+														<td class="book">15</td>
+													</tr>
+													<tr>
+														<td colspan="15">
+															<span>Floor 2</span>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td>2</td>
+														<td class="book">3</td>
+														<td>4</td>
+														<td class="book">5</td>
+														<td class="book">6</td>
+														<td>7</td>
+														<td>8</td>
+														<td class="book">9</td>
+														<td>10</td>
+														<td class="book">11</td>
+														<td>12</td>
+														<td>13</td>
+														<td class="book">14</td>
+														<td class="book">15</td>
+													</tr>
+													<tr>
+														<td colspan="15">
+															<span>Floor 3</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="book">1</td>
+														<td>2</td>
+														<td>3</td>
+														<td>4</td>
+														<td>5</td>
+														<td>6</td>
+														<td>7</td>
+														<td class="book">8</td>
+														<td>9</td>
+														<td>10</td>
+														<td>11</td>
+														<td>12</td>
+														<td>13</td>
+														<td>14</td>
+														<td class="book">15</td>
+													</tr>
+													<tr>
+														<td colspan="15">
+															<span>Floor 4</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="book">1</td>
+														<td class="book">2</td>
+														<td class="book">3</td>
+														<td>4</td>
+														<td>5</td>
+														<td class="book">6</td>
+														<td>7</td>
+														<td>8</td>
+														<td>9</td>
+														<td class="book">10</td>
+														<td>11</td>
+														<td>12</td>
+														<td class="book">13</td>
+														<td>14</td>
+														<td class="book">15</td>
+													</tr>
+												</table>
+										</div>
+										<div class="economy_tab">
+											<table class="table_floors">
+													<tr>
+														<td colspan="10">
+															<span>Floor 1</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="book">1</td>
+														<td>2</td>
+														<td class="book">3</td>
+														<td>4</td>
+														<td>5</td>
+														<td>6</td>
+														<td>7</td>
+														<td>8</td>
+														<td>9</td>
+														<td class="book">10</td>
+													</tr>
+													<tr>
+														<td colspan="10">
+															<span>Floor 2</span>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td class="book">2</td>
+														<td>3</td>
+														<td>4</td>
+														<td class="book">5</td>
+														<td>6</td>
+														<td>7</td>
+														<td>8</td>
+														<td class="book">9</td>
+														<td>10</td>
+													</tr>
+													<tr>
+														<td colspan="10">
+															<span>Floor 3</span>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td>2</td>
+														<td class="book">3</td>
+														<td>4</td>
+														<td class="book">5</td>
+														<td>6</td>
+														<td>7</td>
+														<td class="book">8</td>
+														<td>9</td>
+														<td>10</td>
+													</tr>
+													<tr>
+														<td colspan="10">
+															<span>Floor 4</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="book">1</td>
+														<td class="book">2</td>
+														<td>3</td>
+														<td>4</td>
+														<td>5</td>
+														<td>6</td>
+														<td class="book">7</td>
+														<td class="book">8</td>
+														<td class="book">9</td>
+														<td class="book">10</td>
+													</tr>
+												</table>
+										</div>
+										<div class="deluxe_tab">
+											<table class="table_floors">
+													<tr>
+														<td colspan="5">
+															<span>Floor 1</span>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td>2</td>
+														<td class="book">3</td>
+														<td class="book">4</td>
+														<td>5</td>
+													</tr>
+													<tr>
+														<td colspan="5">
+															<span>Floor 2</span>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td>2</td>
+														<td>3</td>
+														<td class="book">4</td>
+														<td>5</td>
+													</tr>
+													<tr>
+														<td colspan="5">
+															<span>Floor 3</span>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td>2</td>
+														<td>3</td>
+														<td>4</td>
+														<td>5</td>
+													</tr>
+													<tr>
+														<td colspan="5">
+															<span>Floor 4</span>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td>2</td>
+														<td>3</td>
+														<td class="book">4</td>
+														<td>5</td>
+													</tr>
+												</table>
+										</div>
+										<div class="suite_tab">
+											<table class="table_floors">
+													<tr>
+														<td colspan="3">
+															<span>Floor 1</span>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td>2</td>
+														<td>3</td>
+													</tr>
+													<tr>
+														<td colspan="3">
+															<span>Floor 2</span>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td class="book">2</td>
+														<td>3</td>
+													</tr>
+													<tr>
+														<td colspan="3">
+															<span>Floor 3</span>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td>2</td>
+														<td class="book">3</td>
+													</tr>
+													<tr>
+														<td colspan="3">
+															<span>Floor 4</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="book">1</td>
+														<td>2</td>
+														<td>3</td>
+													</tr>
+												</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</form>
+
 				</div>
 			</div>
 		</section>

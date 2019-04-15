@@ -1,6 +1,10 @@
 .services
+	position: relative
 	color: white
 	padding-top: 55px
+	
+	input
+		display: none
 
 	&__title
 		+regular
@@ -21,6 +25,7 @@
 		position: relative
 		overflow: hidden
 		border-radius: 50px 50px
+
 		
 	&__list img
 		max-width: 100%
@@ -39,7 +44,7 @@
 		font-size: 20px
 		transition: all .35s
 
-	&__list--description a
+	& .read--button
 		text-transform: uppercase
 		font-size: 13px
 		display: block
@@ -49,33 +54,76 @@
 		border: 1px solid white
 		padding: 10px
 		border-radius: 50px 50px
+		cursor: pointer
 
 	&__list li:hover > .services__list--description
 		top: 0%
 
-	&__list--description a:hover
+	&__list--description label:hover
 		border: 1px solid red
 		color: red
 		transition: all .25s
 
-
+	
 	.information
-		display: none
+		display: flex
+		align-items: center
+		justify-content: center
+		transform: scale(0)
 		position: absolute
-		width: 100%
+		top: 10%
+		left: 5%
+		width: 90%
 		height: 100%
-		text-align: center
-		top: 0
-		left: 0
-		background-color: gray
+		transition: .5s ease-in-out
 
-	li:hover
-		overflow: none
+		&--block
+			transform: scale(0)
+			position: inherit
+			text-align: center
+			width: 40%
+			height: 50%
+			font-size: 20px
+			border-radius: 50px 50px
+			background-image: url("../img/background.jpg")
+			opacity: 0.95
+			transition: inherit
+			display: flex
+			align-items: center
+
+		& .infomation--close
+			position: absolute
+			top: 0
+			right: -4%
+			font-size: 25px
+			cursor: pointer
+
+		& p 
+			padding: 0 10px
+
+	input[class="open--infomation"]:checked ~ div .information,
+	input[id='read-more1']:checked ~ div .information .beauty-salon,
+	input[id='read-more2']:checked ~ div .information .parking,
+	input[id='read-more3']:checked ~ div .information .wardrobe,
+	input[id='read-more4']:checked ~ div .information .transfer,
+	input[id='read-more5']:checked ~ div .information .businss-center,
+	input[id='read-more6']:checked ~ div .information .wi-fi
+		transform: scale(1)
+		transition: .5s ease-in-out
+
+	
+
+
+@media (max-width: 1199px)
+	.information 
+		max-height: 95%
+
+		&--block
+			max-height: 33%
 	
 
 @media (max-width: 991px)
 	.services
-
 		&__list--description
 			top: 0%
 			background-color: rgba(0,0,0, .2)
@@ -87,12 +135,23 @@
 			color: yellow
 			border: 1px solid yellow
 			+bolt
-	
+
+		.information 
+			
+
 @media (max-width: 768px)
 	.services
 		&__list--description
 			padding-top: 40px
 			font-size: 25px		
+
+		.information
+			height: 50%
+			&--block
+				font-size: 15px
+
+			& p .infomation--close
+				font-size: 20px
 			
 
 @media (max-width: 650px)
