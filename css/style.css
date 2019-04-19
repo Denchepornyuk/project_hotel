@@ -827,5 +827,51 @@ input[id="menu"]:checked ~ .header .menu__phone {
     border-spacing: 5px 14px; }
   .booking .booking__phone {
     right: 100px; } }
+.footer {
+  padding: 10px 0;
+  margin-top: 55px;
+  background-color: #262626;
+  color: #ffffff;
+  font-family: 'Proxima Nova Semibold', sans-serif; }
+  .footer-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .footer a {
+    color: #ffffff;
+    text-decoration: none; }
+  .footer__title {
+    text-transform: uppercase;
+    font-family: 'Queen Rosie Regular', sans-serif;
+    text-align: center; }
+  .footer__description span {
+    display: block; }
+  .footer__location {
+    margin-bottom: 10px; }
+  .footer__copy {
+    color: #767676; }
+  .footer__phone {
+    display: block;
+    margin-bottom: 10px; }
+  .footer-social {
+    text-align: center; }
+  .footer-social__link {
+    margin-left: 10px; }
+
+@media (max-width: 650px) {
+  .footer-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center; }
+  .footer__title {
+    margin-top: 0px; } }
 
 /*# sourceMappingURL=style.css.map */

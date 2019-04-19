@@ -1,0 +1,52 @@
+.footer
+	padding: 10px 0
+	margin-top: 55px
+	background-color: #262626
+	color: #ffffff
+	+bolt
+	
+	&-block
+		display: flex
+		justify-content: space-between
+		align-items: center
+	a
+		color: #ffffff
+		text-decoration: none
+
+	&__title
+		text-transform: uppercase
+		+regular
+		text-align: center
+
+
+	&__description 
+		span
+			display: block
+
+	&__location
+		margin-bottom: 10px
+
+
+	&__copy
+		color: #767676
+
+	&__phone
+		display: block
+		margin-bottom: 10px
+	
+	&-social
+		text-align: center
+	&-social__link
+		margin-left: 10px
+
+
+
+@media (max-width: 650px)
+	.footer
+		&-block
+			flex-direction: column
+			text-align: center
+		
+		&__title
+			margin-top: 0px
+

@@ -1,0 +1,10 @@
+.footer {
+  padding: 40px 0;
+  background-color: #262626;
+  color: #ffffff; }
+  .footer a {
+    color: #ffffff; }
+  .footer__title {
+    text-transform: uppercase; }
+
+/*# sourceMappingURL=_footer.css.map */
