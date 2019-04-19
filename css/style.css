@@ -640,9 +640,8 @@ input[id="menu"]:checked ~ .header .menu__phone {
   .gallery .wrap {
     height: 300px; } }
 .booking {
-  margin-top: 55px;
-  color: white;
-  position: relative; }
+  padding-top: 55px;
+  color: white; }
   .booking__title {
     font-family: 'Queen Rosie Regular', sans-serif;
     text-align: center; }
@@ -827,6 +826,9 @@ input[id="menu"]:checked ~ .header .menu__phone {
     border-spacing: 5px 14px; }
   .booking .booking__phone {
     right: 100px; } }
+.map {
+  margin-top: 55px; }
+
 .footer {
   padding: 10px 0;
   margin-top: 55px;

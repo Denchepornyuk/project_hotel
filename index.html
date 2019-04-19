@@ -339,13 +339,13 @@
 	          		<input type="tel" id="tel" name="tel" pattern="[\+][3][8][0]\d{9}" 
 	          					 placeholder="+380111111111" required autocomplete='off' tabindex="3">
 
-	          		<label for="email">Email</label>
-	            	<input type="email" id="email" name="email" autocomplete='on'
+	          		<label for="email">E-mail</label>
+	            	<input type="email" id="email" name="email" autocomplete='on' placeholder="E-mail" 
 	            				 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" tabindex="4"
 	            				 required>
 							</div>
 
-							<input type="radio" name="room_type" id="standart">
+							<input type="radio" name="room_type" id="standart" checked>
             	<input type="radio" name="room_type" id="economy">
             	<input type="radio" name="room_type" id="deluxe">
             	<input type="radio" name="room_type" id="suite">
@@ -661,7 +661,12 @@
 		</section>
 
 		<div class="map" id="map">
-			
+			<script 
+				type="text/javascript" 
+				charset="utf-8" async 
+				src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A44c63dc83524bbaefcf4b6d36d7066e18cafd099ce66a5a4257b8b0917326619&amp;
+						 width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=flase">
+			</script>
 		</div>
 	</main>
 
@@ -678,9 +683,15 @@
 					<div class="footer__contacts">
 						<span class="footer__phone">+(380) 12-345-6789</span>
 						<div class="footer-social">
-							<a href="#" class="footer-social__link"><i class="fab fa-twitter"></i></a>
-							<a href="#" class="footer-social__link"><i class="fab fa-facebook-f"></i></a>
-							<a href="#" class="footer-social__link"><i class="fab fa-instagram"></i></a>
+							<a href="https://twitter.com/" class="footer-social__link" target='_blank'>
+								<i class="fab fa-twitter"></i>
+							</a>
+							<a href="https://www.facebook.com/" class="footer-social__link" target='_blank'>
+								<i class="fab fa-facebook-f"></i>
+							</a>
+							<a href="https://www.instagram.com/" class="footer-social__link" target='_blank'>
+								<i class="fab fa-instagram"></i>
+							</a>
 						</div>
 					</div>
 				</div>
