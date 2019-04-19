@@ -645,8 +645,8 @@ input[id="menu"]:checked ~ .header .menu__phone {
   .booking__title {
     font-family: 'Queen Rosie Regular', sans-serif;
     text-align: center; }
-  .booking .booking__phone {
-    margin-left: 5%;
+  .booking__phone {
+    margin-left: 6%;
     font-family: 'Proxima Nova Semibold', sans-serif; }
   .booking input {
     margin-bottom: 10px;
@@ -810,6 +810,8 @@ input[id="menu"]:checked ~ .header .menu__phone {
           background-color: gray; }
 
 @media (max-width: 1199px) {
+  .booking__phone {
+    margin-left: 4%; }
   .booking .type__rooms {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -822,16 +824,52 @@ input[id="menu"]:checked ~ .header .menu__phone {
     margin: auto;
     margin-bottom: 10px; } }
 @media (max-width: 991px) {
+  .booking__phone {
+    margin-left: 3%; }
   .booking__room form .booking__block .view_rooms .tabbed table {
     border-spacing: 5px 14px; }
-  .booking .booking__phone {
-    right: 100px; } }
+  .booking__room form .booking__block .booking__day {
+    padding: 5px 10px; } }
+@media (max-width: 768px) {
+  .booking {
+    text-align: center; }
+    .booking__phone {
+      margin-left: auto; }
+    .booking__room form {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .booking__room form .booking__form .personal_data {
+        width: 300px; }
+    .booking .view_rooms {
+      height: 500px; } }
+@media (max-width: 650px) {
+  .booking__room form .booking__block .booking__day {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 60%; }
+  .booking__room form .booking__block .view_rooms .tabbed .tabs table {
+    margin-right: 90px;
+    font-size: 15px; }
+  .booking__room form .booking__block .view_rooms .tabbed .tabs div {
+    border: none;
+    padding: 0px; }
+  .booking__room form .booking__block .view_rooms .tabbed label {
+    font-size: 15px; } }
 .map {
-  margin-top: 55px; }
+  padding-top: 55px; }
 
 .footer {
   padding: 10px 0;
-  margin-top: 55px;
   background-color: #262626;
   color: #ffffff;
   font-family: 'Proxima Nova Semibold', sans-serif; }

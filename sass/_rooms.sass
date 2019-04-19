@@ -2,12 +2,13 @@
 	padding-top: 55px
 	color: white
 
+
 	&__title
 		+regular
 		text-align: center
 
-	.booking__phone
-		margin-left: 5%
+	&__phone
+		margin-left: 6%
 		+bolt
 
 	input
@@ -109,12 +110,13 @@
 			.view_rooms
 				width: 100%
 				position: relative
+
 				.tabbed
 					margin-top: 10px
 					padding: 0 30px
 
 				.tabbed >  input
-						display: none
+					display: none
 
 				.tabbed label
 					padding: 0 15px
@@ -131,6 +133,7 @@
 					opacity: 0
 					width: 93%
 					padding: 20px
+
 					border: 2px solid gray
 
 				.tabbed input[id="tab_1"]:checked ~ .tabs div.standart_tab,
@@ -166,6 +169,9 @@
 @media (max-width: 1199px)
 	.booking
 
+		&__phone
+			margin-left: 4%
+
 		.type__rooms
 			flex-direction: column
 		
@@ -184,18 +190,62 @@
 
 @media (max-width: 991px)
 	.booking
+		&__phone
+			margin-left: 3%
+
 		&__room form
 			.booking__block
 				.view_rooms
 					.tabbed table
 						border-spacing: 5px 14px
 		
-		.booking__phone
-			right: 100px	
+			.booking__block
+				.booking__day
+					padding: 5px 10px
+				
+
+@media (max-width: 768px)
+	.booking
+		text-align: center
+		&__phone
+			margin-left: auto
+
+		&__room form
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
+			.booking__form
+				.personal_data
+					width: 300px
+
+		.view_rooms
+			height: 500px
+
+@media (max-width: 650px)
+	.booking
+
+		&__room form
+			.booking__block
+				.booking__day
+					flex-direction: column
+					width: 60%
+			
+				.view_rooms
+					.tabbed 
+						.tabs
+							table
+								margin-right: 90px
+								font-size: 15px
+
+						.tabs div
+							border: none
+							padding: 0px
+							
 
 
+					.tabbed label
+						font-size: 15px
+	
 
-
-
-
-		
+	
