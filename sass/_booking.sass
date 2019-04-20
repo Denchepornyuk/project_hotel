@@ -3,11 +3,11 @@
 	color: white
 
 
-	&__title
+	&-title
 		+regular
 		text-align: center
 
-	&__phone
+	&-phone
 		margin-left: 6%
 		+bolt
 
@@ -28,13 +28,13 @@
 	::-webkit-input-placeholder
 		color: white
 		
-	&__room form
+	&-room form
 		display: flex
 		justify-content: space-around
 		align-items: flex-start
 		+bolt
 
-		.booking__form
+		.booking-form
 			flex-basis: 20%
 			display: flex
 			flex-direction: column
@@ -42,7 +42,7 @@
 			flex-wrap: wrap
 			margin-left: 10px
 			
-			.personal_data
+			&_personalData
 				border: 2px solid grey
 				padding: 20px
 				border-radius: 50px 50px
@@ -51,7 +51,7 @@
 			input[name="room_type"]
 				display: none
 
-			.type__rooms
+			&_typeRooms
 				margin-top: 10px
 				display: flex
 				justify-content: space-around
@@ -74,26 +74,26 @@
 					margin-top: 15px
 					cursor: pointer
 
-			input[id='standart']:checked ~ .type__rooms label[for='standart'],
-			input[id='economy']:checked ~ .type__rooms label[for='economy'],
-			input[id='deluxe']:checked ~ .type__rooms label[for='deluxe'],
-			input[id='suite']:checked ~ .type__rooms label[for='suite']
+			input[id='standart']:checked ~ .booking-form_typeRooms label[for='standart'],
+			input[id='economy']:checked ~ .booking-form_typeRooms label[for='economy'],
+			input[id='deluxe']:checked ~ .booking-form_typeRooms label[for='deluxe'],
+			input[id='suite']:checked ~ .booking-form_typeRooms label[for='suite']
 				border-radius: 50px 50px
 				border: 1px solid white
 				background-color: gray
 		
-		.booking__block
+		.booking-block
 			flex-basis: 75%
 			display: flex
 			justify-content: center
 			flex-direction: column
 			align-items: center
 
-			.booking__button input
+			&__button input
 				margin-top: 20px
 				cursor: pointer
 
-			.booking__day
+			&_day
 				width: 100%
 				border: 2px solid gray
 				border-radius: 50px 50px	
@@ -103,11 +103,11 @@
 				text-align: center
 				padding: 10px 0
 
-			.booking__day input
+			&_day input
 				display: block
 				border-radius: 50px 50px
 
-			.view_rooms
+			.booking-block_rooms
 				width: 100%
 				position: relative
 
@@ -169,18 +169,17 @@
 @media (max-width: 1199px)
 	.booking
 
-		&__phone
+		&-phone
 			margin-left: 4%
-
-		.type__rooms
-			flex-direction: column
 		
-		&__room form
-			.booking__form
-				.type__rooms label
+		&-room form
+			.booking-form
+				&_typeRooms
+					flex-direction: column
+				&_typeRooms
 					margin-top: 2px
 
-			.booking__day input[type='text']
+			.booking-block_day input[type='text']
 				width: 60%
 				margin: auto
 				margin-bottom: 10px
@@ -190,48 +189,48 @@
 
 @media (max-width: 991px)
 	.booking
-		&__phone
+		&-phone
 			margin-left: 3%
 
-		&__room form
-			.booking__block
-				.view_rooms
+		&-room form
+			.booking-block
+				.booking-block_rooms
 					.tabbed table
 						border-spacing: 5px 14px
 		
-			.booking__block
-				.booking__day
+			.booking-block
+				&_day
 					padding: 5px 10px
 				
 
 @media (max-width: 768px)
 	.booking
 		text-align: center
-		&__phone
+		&-phone
 			margin-left: auto
 
-		&__room form
+		&-room form
 			flex-direction: column
 			justify-content: center
 			align-items: center
 
-			.booking__form
-				.personal_data
+			.booking-form
+				&_personalData
 					width: 300px
+					margin-bottom: 10px
 
-		.view_rooms
+		.booking-block_rooms
 			height: 500px
 
 @media (max-width: 650px)
 	.booking
-
-		&__room form
-			.booking__block
-				.booking__day
+		&-room form
+			.booking-block
+				&_day
 					flex-direction: column
 					width: 60%
 			
-				.view_rooms
+				.booking-block_rooms
 					.tabbed 
 						.tabs
 							table
@@ -241,11 +240,6 @@
 						.tabs div
 							border: none
 							padding: 0px
-							
-
 
 					.tabbed label
-						font-size: 15px
-	
-
-	
+						font-size: 15px	

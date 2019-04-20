@@ -1,88 +1,167 @@
-.hero
-	&--wrap
-		display: flex
-		justify-content: space-around
-		align-items: center
-		margin-top: 30px
+.hero__wrap
+	width: 100%
+	height: 100vh
+	overflow: hidden
 
-	&__phone
+.hero
+	position: relative
+	input[name='slider']
+		display: none
+
+	.images
+		width: 500%
+		position: relative
+
+	.images div 
 		width: 20%
+		height: 100vh
+		float: left
+		background-size: cover
+
+	.images div::before
+		content: ''
+		width: 20%
+		height: 100vh
+		background-color: #7B6F66
+		position: absolute
+		opacity: .5
+
+
+	.overflow
+		width: 100%
+
+	.photo1
+		background-image: url('../img/portfolio/1.jpg')
+	.photo2
+		background-image: url('../img/portfolio/2.jpg')
+	.photo3
+		background-image: url('../img/portfolio/3.jpg')
+	.photo4
+		background-image: url('../img/portfolio/4.jpg')
+	.photo5
+		background-image: url('../img/portfolio/5.jpg')
+
+
+	.switches
+		position: absolute
+		bottom: 2%
+		left: 40%
+		width: 20%
+		display: flex
+		justify-content: space-between
+
+	.switches label
+		border: 1px solid #57D3FF
+		border-radius: 50px
+		height: 15px
+		width: 15px
+		cursor: pointer
+
+	input[id="toggle1"]:checked ~ .switches label:nth-child(1),
+	input[id="toggle2"]:checked ~ .switches label:nth-child(2),
+	input[id="toggle3"]:checked ~ .switches label:nth-child(3),
+	input[id="toggle4"]:checked ~ .switches label:nth-child(4),
+	input[id="toggle5"]:checked ~ .switches label:nth-child(5)
+		background-color: #57D3FF
+
+	#toggle1:checked ~ .overflow .images
+		transform: translateX(0%)
+
+	#toggle2:checked ~ .overflow .images
+		transform: translateX(-20%)
+
+	#toggle3:checked ~ .overflow .images
+		transform: translateX(-40%)
+
+	#toggle4:checked ~ .overflow .images
+		transform: translateX(-60%)
+
+	#toggle5:checked ~ .overflow .images
+		transform: translateX(-80%)
+
+	.images
+		transition: all 1000ms cubic-bezier(0.770, 0.000, 0.175, 1.000)
+
+
+	&-header
+		position: absolute
+		top: 35%
+		left: 5%
+		width: 90%
+		display: flex
+		justify-content: space-between
+		align-items: center
 		+bolt
 
-	.phone__number
-		display: block
-		font-size: 20px
-		letter-spacing: 1px
-	
-	.phone__description
-		text-align: center
+		&_phone
+			flex-basis: 15%
+			text-align: center
+			font-size: 18px
+			color: #ffffff
 
+		&_phone span
+			display: block
 
-	&__title
-		+regular
-	
-	&__title h1 
-		font-size: 45px
-		text-align: center
-		word-wrap: normal
-		margin-bottom: 10px
+		&_title
+			+regular
+			font-size: 30px
 
-	&__title h1:first-letter
-		font-size: 65px
+		&_search
+			flex-basis: 15%
+			text-align: center
 
-	&__search
-		width: 20%
-		
-	&__search form
-		margin-top: 15px
-		display: flex
-		flex-direction: column
-		align-items: center
-		padding: 0
-	
-	&__search input
-		width: 80%
+			input
+				width: 90%
 
 @media (max-width: 1199px)
-	
-
+	.hero
+		height: 900px
+		.images div 
+			height: 900px
+		.images div::before
+			height: 900px
 
 @media (max-width: 991px)
 	.hero
-
-		&__title h1
-			font-size: 35px
-			margin-top: 30px
-			text-align: center
-
-		&__title h1:first-letter
-			font-size: 55px
-
-
-		.phone__number
-			font-size: 16px
-			
-		.phone__description
-			font-size: 12px
-
-		&__search input
-			width: 60%
+		height: 700px
+		.images div 
+			height: 700px
+		.images div::before
+			height: 700px
+		&-header
+			top: 40%
+			&_title
+				font-size: 25px
+			&_phone
+				font-size: 16px
 
 @media (max-width: 768px)
-
 	.hero
-		&__phone, &__search
-			display: none
-
-		&__title
-			width: 100%
-
-
+		height: 550px
+		.images div 
+			height: 550px
+		.images div::before
+			height: 550px
+		&-header
+			flex-direction: column
+			top: 30%
+			&_search
+				display: none	
+			&_title
+				order: -1
 
 @media (max-width: 650px)
-	.hero--wrap
-		margin-top: 0
-
-	.hero__title h1
-		margin: 0
-		margin-right: 25px
+	.hero
+		height: 400px
+		.images div 
+			height: 400px
+		.images div::before
+			height: 400px
+		.switches
+			width: 30%
+			left: 35%
+		&-header
+			&_title
+				font-size: 16px
+			&_phone
+				font-size: 13px

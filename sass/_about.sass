@@ -1,76 +1,75 @@
 .about
-	color: white
+	color: #ffffff
 	padding-top: 55px  
 
-	&__title
+	&-title
 		+regular
 		text-align: center
 		font-size: 25px
 
-	&--content
+	&-content
 		display: flex
 		justify-content: space-around
 		align-items: center
 		width: 95%
 		margin: auto	
 
-	&__description
+	&-description
 		font-size: 18px
 		width: 60%
 
-	&__description span
+	&-description span
 		+bolt
 		text-decoration: underline
 		font-size: 20px
 	
-	&__logo img
+	&-content_logo img
 		border-radius: 50px 50px
 		width: 400px
 		height: 300px
-		border: 2px solid gray
+		border: 2px solid #808080
 		margin-bottom: 10px
 	
 @media (max-width: 1199px)
 	.about
-		&__description
+		&-description
 			width: 50%
 
 @media (max-width: 991px)
 	.about
-		&__description
+		&-description
 			font-size: 16px
 			width: 40%
 
-		&__description span
+		&-description span
 			font-size: 18px
 
 @media (max-width: 768px)
 	.about
-
-		&__description
+		&-description
 			width: 70%
 
-		&__logo img
+		&-content_logo img
 			width: 95%
 			
 
 @media (max-width: 650px)
 	.about
-		&--content
+		&-content
 			flex-direction: column
 			justify-content: center
 			align-items: center
 	
-		&__logo
+		&-content_logo
 			text-align: center
 
-		&__logo img
+		&-content_logo img
 			width: 100%
 			max-height: 200px
 
-		&__description
+		&-description
 			width: 100%
 			font-size: 14px
 
-		&__description span
+		&-description span
 			font-size: 15px

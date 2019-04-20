@@ -14,11 +14,11 @@
 </head>
 <body>
 	
-	<input type="checkbox" name="toggle" id="menu" class="toggle__menu">
+	<input type="checkbox" name="toggle" id="menu" class="toggle_menu">
 	<label for="menu"><i class="fas fa-bars"></i></label>
 	<header class="header">
 		<div class="container">
-			<div class="menu__phone">
+			<div class="header-menu__phone">
 				<ul>
 					<li><a href="#">Home</a></li>
 					<li><a href="#about">About</a></li>
@@ -28,8 +28,8 @@
 					<li><a href="#location">Location</a></li>
 				</ul>
 			</div>
-			<nav class="navbar">
-				<ul class="navbar__links">
+			<nav class="header-navbar">
+				<ul class="header-navbar__links">
 					<li><a href="#">Home</a></li>
 					<li><a href="#about">About</a></li>
 					<li><a href="#services">Services</a></li>
@@ -40,118 +40,57 @@
 			</nav>
 		</div>
 	</header>
-	
+
 	<main>
-		<section class="hero">
-			<div class="container hero--wrap">
-				<div class="hero__phone">
-					<span class="phone__number">+(380) 12-345-6789</span>
-					<span class="phone__description">Your first visit? Call for info</span>
+		<section class="hero hero__wrap">
+			<input type="radio" class="test" name="slider" id="toggle1" checked>
+			<input type="radio" class="test" name="slider" id="toggle2">
+			<input type="radio" class="test" name="slider" id="toggle3">
+			<input type="radio" class="test" name="slider" id="toggle4">
+			<input type="radio" class="test" name="slider" id="toggle5">	
+			<div class="overflow">
+				<div class="images">
+					<div class="photo1"></div>
+					<div class="photo2"></div>
+					<div class="photo3"></div>
+					<div class="photo4"></div>
+					<div class="photo5"></div>
 				</div>
-				<div class="hero__title">
-					<h1>Grand Hotel</h1>
-				</div>
-				<div class="hero__search">
-					<form>
+			</div>
+			<div class="switches">
+				<label for="toggle1"></label>
+				<label for="toggle2"></label>
+				<label for="toggle3"></label>
+				<label for="toggle4"></label>
+				<label for="toggle5"></label>
+			</div>
+			<div class="container">
+				<div class="hero-header">
+					<div class="hero-header_phone">
+						<span class="phone__number" >+(380) 12-345-6789</span>
+						<span class="phone__description">Your first visit? Call for info</span>
+					</div>
+					<div class="hero-header_title">
+						<h1>Grand Hotel</h1>
+					</div>
+					<div class="hero-header_search">
 						<input type="search" name='search' placeholder="Search...">
 						<button class='search__button'>
 							<i class="fas fa-search"></i>
 						</button>
-					</form>
-				</div>
-			</div>
-		</section>
-		
-		<!--<section class='hero'>
-			<div class="container">
-				<div class="hero--wrap">
-					<div class="hero__phone">
-						<span class="phone__number">+1(234)567-8901</span>
-						<span class="phone__description">Your first visit? Call for info</span>
-					</div>
-					<div class="hero__title">
-						<h1>Grand Hotel</h1>
-					</div>
-					<div class="hero__search">
-						<form>
-							<input type="search" name='search' placeholder="Search...">
-							<button class='search__button'>
-								<i class="fas fa-search"></i>
-							</button>
-						</form>
 					</div>
 				</div>
 			</div>
-			<div class="wrapper">
-				<input type="radio" name="slides" id="slide1" checked>
-				<input type="radio" name="slides" id="slide2">
-				<input type="radio" name="slides" id="slide3">
-				<input type="radio" name="slides" id="slide4">
-				<input type="radio" name="slides" id="slide5">
-				<div class="slider">
-					<div class="overflow">
-						<div class="images">
-							<label for="slide1" class="slides">
-								<img src="img/portfolio/1.jpg" alt="">
-							</label>
-							<label for="slide2" class="slides">
-								<img src="img/portfolio/2.jpg" alt="">
-							</label>
-							<label for="slide3" class="slides">
-								<img src="img/portfolio/3.jpg" alt="">
-							</label>
-							<label for="slide4" class="slides">
-								<img src="img/portfolio/4.jpg" alt="">
-							</label>
-							<label for="slide5" class="slides">
-								<img src="img/portfolio/5.jpg" alt="">
-							</label>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>-->
-
-		<section class="portfolio">
-			<div class="container wrap">
-				<div class="portfolio__collection">
-					<div class="slider">
-						<input checked type="radio" name="slider" id="toggle1">
-						<input type="radio" name="slider" id="toggle2">
-						<input type="radio" name="slider" id="toggle3">
-						<input type="radio" name="slider" id="toggle4">
-						<input type="radio" name="slider" id="toggle5">
-						<div class="slides">
-							<div class="overflow">
-								<div class="images">
-									<div class="photo"><img src="img/portfolio/1.jpg"></div>
-									<div class="photo"><img src="img/portfolio/2.jpg"></div>
-									<div class="photo"><img src="img/portfolio/3.jpg"></div>
-									<div class="photo"><img src="img/portfolio/4.jpg"></div>
-									<div class="photo"><img src="img/portfolio/5.jpg"></div>
-								</div>
-							</div>
-						</div>
-						<div class="switches">
-							<label for="toggle1"></label>
-							<label for="toggle2"></label>
-							<label for="toggle3"></label>
-							<label for="toggle4"></label>
-							<label for="toggle5"></label>
-						</div>
-					</div>
-				</div>
-			</div> 
 		</section>
 
 		<section id="about" class="about">
 			<div class="container wrap">
-				<h2 class="about__title">About us</h2>
-				<div class="about--content">
-					<div class="about__logo">
+				<h2 class="about-title">About us</h2>
+				<div class="about-content">
+					<div class="about-content_logo">
 						<img src="img/logo.jpg" alt="logo">
 					</div>
-					<p class="about__description">
+					<p class="about-description">
 						 <span>Grand Hotel</span> - is the largest hotel on the water and the most romantic hotel in Kiev! 
 						 From the panoramic hotel windows magnificent view of the Dnypro river, right bank 
 						 of the city and millennial Kiev-Pechersk Lavra, picturesque alleys of park.
@@ -175,59 +114,59 @@
 			<input type="radio" name="more" id="read-more6" class="open--infomation">
 			<input type="radio" name="more" id="close">
 			<div class="container wrap">
-				<h2 class="services__title">Services</h2>
-				<ul class="services__list">
+				<h2 class="services-title">Services</h2>
+				<ul class="services-list">
 					<li>
-						<div class="services__list--description">
+						<div class="services-list_description">
 							<p>Beauty salon</p>
-							<label class='read--button' for="read-more1">read more</label>
+							<label class='services__button' for="read-more1">read more</label>
 						</div>
 						<img src="img/services/beauty_salon.png" alt="Beauty salon">
 					</li>
 
 					<li>
-						<div class="services__list--description">
+						<div class="services-list_description">
 							<p>Parking</p>
-							<label class='read--button' for="read-more2">read more</label>
+							<label class='services__button' for="read-more2">read more</label>
 						</div>
 						<img src="img/services/parking.jpg" alt="Parking">
 					</li>
 
 					<li>
-						<div class="services__list--description">
+						<div class="services-list_description">
 							<p>Wardrobe</p>
-							<label class='read--button' for="read-more3">read more</label>
+							<label class='services__button' for="read-more3">read more</label>
 						</div>
 						<img src="img/services/Wardrobe.jpg" alt="Wardrobe">
 					</li>
 
 					<li>
-						<div class="services__list--description">
+						<div class="services-list_description">
 							<p>Transfer</p>
-							<label class='read--button' for="read-more4">read more</label>
+							<label class='services__button' for="read-more4">read more</label>
 						</div>
 						<img src="img/services/transfer.jpg" alt="Transfer">
 					</li>
 
 					<li>
-						<div class="services__list--description">
+						<div class="services-list_description">
 							<p>Businss center</p>
-							<label class='read--button' for="read-more5">read more</label>
+							<label class='services__button' for="read-more5">read more</label>
 						</div>
 						<img src="img/services/business_center.jpg" alt="Businss center">
 					</li>
 
 					<li>
-						<div class="services__list--description">
+						<div class="services-list_description">
 							<p>Wi-fi</p>
-							<label class='read--button' for="read-more6">read more</label>
+							<label class='services__button' for="read-more6">read more</label>
 						</div>
 						<img src="img/services/wifi.jpg" alt="Wi-fi">
 					</li>
 				</ul>
-				<div class="information">
-					<div class="information--block beauty-salon">
-						<label for="close" class="infomation--close">
+				<div class="services-information">
+					<div class="services-information_block beauty-salon">
+						<label for="close" class="block__close">
 							<i class="far fa-times-circle"></i>
 						</label>
 						<p>	
@@ -237,8 +176,8 @@
 							service.
 						</p>
 					</div>
-					<div class="information--block parking">
-						<label for="close" class="infomation--close">
+					<div class="services-information_block parking">
+						<label for="close" class="block__close">
 							<i class="far fa-times-circle"></i>
 						</label>
 						<p>
@@ -248,8 +187,8 @@
 							restaurants in it. 
 						</p>
 					</div>
-					<div class="information--block wardrobe">
-						<label for="close" class="infomation--close">
+					<div class="services-information_block wardrobe">
+						<label for="close" class="block__close">
 							<i class="far fa-times-circle"></i>
 						</label>
 						<p>
@@ -258,8 +197,8 @@
 							from 8:00 to 20:00.  
 						</p>
 					</div>
-					<div class="information--block transfer">
-						<label for="close" class="infomation--close">
+					<div class="services-information_block transfer">
+						<label for="close" class="block__close">
 							<i class="far fa-times-circle"></i>
 						</label>
 						<p>
@@ -268,8 +207,8 @@
 							for You.  
 						</p>
 					</div>
-					<div class="information--block businss-center">
-						<label for="close" class="infomation--close">
+					<div class="services-information_block businss-center">
+						<label for="close" class="block__close">
 							<i class="far fa-times-circle"></i>
 						</label>
 						<p>
@@ -279,8 +218,8 @@
 							printing, photocopying and other duties required.  
 						</p>
 					</div>
-					<div class="information--block wi-fi">
-						<label for="close" class="infomation--close">
+					<div class="services-information_block wi-fi">
+						<label for="close" class="block__close">
 							<i class="far fa-times-circle"></i>
 						</label>
 						<p>
@@ -305,7 +244,7 @@
 			<input type="radio" name="gallery" id="photo8">
 			<input type="radio" name="gallery" id="photo9">
 			<div class="container wrap">
-				<div class="overflow">
+				<div class="gallery-overflow">
 					<label for="photo1"></label>
 					<label for="photo2"></label>
 					<label for="photo3"></label>
@@ -319,14 +258,15 @@
 			</div>
 		</section>
 
+		
 		<section id='rooms' class="booking">
 			<div class="container wrap">
-				<h2 class="booking__title">Booking room</h2>
-				<span class="booking__phone">+(380) 12-345-6789</span>
-				<div class="booking__room">
+				<h2 class="booking-title">Booking room</h2>
+				<span class="booking-phone">+(380) 12-345-6789</span>
+				<div class="booking-room">
 					<form action="#" method="post">
-						<div class="booking__form">
-							<div class="personal_data">
+						<div class="booking-form">
+							<div class="booking-form_personalData">
 								<label for="name">Name</label>
 	       			 	<input type="text" id="name" name="name" required tabindex="1"
 	       			 				 placeholder="Vasya">
@@ -349,8 +289,8 @@
             	<input type="radio" name="room_type" id="economy">
             	<input type="radio" name="room_type" id="deluxe">
             	<input type="radio" name="room_type" id="suite">
-							<div class="type__rooms">
-								<span class="name__rooms">Type of room</span>
+							<div class="booking-form_typeRooms">
+								<span>Type of room</span>
 	            	<label for="standart">Standart</label>
 	            	<label for="economy">Economy</label>
 	            	<label for="deluxe">Deluxe</label>
@@ -358,8 +298,8 @@
 							</div>
 						</div>
 
-						<div class="booking__block">
-							<div class="booking__day">
+						<div class="booking-block">
+							<div class="booking-block_day">
 								<div class="check__in">
 									<label for="first_day">Check in</label>
 									<input type="date" id='check_in' required>
@@ -368,16 +308,16 @@
 									<label for="check_out">Check out</label>
 									<input type="date" id='check_out' required>
 								</div>	
-								<div class="guests__number">
+								<div class="booking-block_guests">
 									<label for="guests">Guest(s)</label>
 									<input type="text" name="guests" id="guests" pattern="\d" required>
 								</div>
-								<div class="booking__button">
+								<div class="booking-block__button">
 									<input type="submit" value="Find room">
 								</div>		
 							</div>
 
-							<div class="view_rooms">
+							<div class="booking-block_rooms">
 								<div class="tabbed">
 									<input type="radio" name="tabs" id="tab_1" checked>
 									<label for="tab_1">Standart</label>
@@ -653,9 +593,7 @@
 								</div>
 							</div>
 						</div>
-						
 					</form>
-
 				</div>
 			</div>
 		</section>
@@ -671,34 +609,41 @@
 	</main>
 
 	<footer class="footer">
-			<div class="container">
-				<div class="footer-block">
-					<div class="footer__description">
-						<span class="footer__location">61, Lomonosova <br> Kyiv, Ukraine, 08132</span>
-						<span class="footer__copy"><i class="far fa-copyright"></i> Grand Hotel, 2019</span>
-					</div>
-					<div class="footer__title">
-						<h2>Grand Hotel</h2>
-					</div>
-					<div class="footer__contacts">
-						<span class="footer__phone">+(380) 12-345-6789</span>
-						<div class="footer-social">
-							<a href="https://twitter.com/" class="footer-social__link" target='_blank'>
-								<i class="fab fa-twitter"></i>
-							</a>
-							<a href="https://www.facebook.com/" class="footer-social__link" target='_blank'>
-								<i class="fab fa-facebook-f"></i>
-							</a>
-							<a href="https://www.instagram.com/" class="footer-social__link" target='_blank'>
-								<i class="fab fa-instagram"></i>
-							</a>
-						</div>
+		<div class="container">
+			<div class="footer-block">
+				<div class="footer__description">
+					<span class="footer__location">61, Lomonosova <br> Kyiv, Ukraine, 08132</span>
+					<span class="footer__copy"><i class="far fa-copyright"></i> Grand Hotel, 2019</span>
+				</div>
+				<div class="footer__title">
+					<h2>Grand Hotel</h2>
+				</div>
+				<div class="footer__contacts">
+					<span class="footer__phone">+(380) 12-345-6789</span>
+					<div class="footer-social">
+						<a href="https://twitter.com/" class="footer-social__link" target='_blank'>
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a href="https://www.facebook.com/" class="footer-social__link" target='_blank'>
+							<i class="fab fa-facebook-f"></i>
+						</a>
+						<a href="https://www.instagram.com/" class="footer-social__link" target='_blank'>
+							<i class="fab fa-instagram"></i>
+						</a>
 					</div>
 				</div>
 			</div>
-		</footer>
+		</div>
+	</footer>
 
-	
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="js/header_scroll.js"></script>
+<script src="js/auto_slider.js"></script>
+
 <!--<script src="js/modal_window.js"></script>-->
 </body>
 </html>

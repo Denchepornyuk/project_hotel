@@ -5,7 +5,7 @@
     background-size: cover;
     height: 620px;
     overflow: hidden; }
-  .gallery .overflow {
+  .gallery .gallery-overflow {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
@@ -14,7 +14,7 @@
     padding-bottom: 10px; }
   .gallery input {
     display: none; }
-  .gallery .overflow label {
+  .gallery .gallery-overflow label {
     width: 150px;
     height: 100px;
     background-size: cover;
@@ -58,30 +58,30 @@
     background-image: url("../img/gallery/8.jpg"); }
   .gallery input[id='photo9']:checked ~ .wrap {
     background-image: url("../img/gallery/9.jpg"); }
-  .gallery input[id='photo1']:checked ~ .wrap .overflow {
+  .gallery input[id='photo1']:checked ~ .wrap .gallery-overflow {
     transition: translateX(0%); }
-  .gallery input[id='photo3']:checked ~ .wrap .overflow {
+  .gallery input[id='photo3']:checked ~ .wrap .gallery-overflow {
     transform: translateX(-22%); }
-  .gallery input[id='photo4']:checked ~ .wrap .overflow {
+  .gallery input[id='photo4']:checked ~ .wrap .gallery-overflow {
     transform: translateX(-22%); }
-  .gallery input[id='photo5']:checked ~ .wrap .overflow {
+  .gallery input[id='photo5']:checked ~ .wrap .gallery-overflow {
     transform: translateX(-45%); }
-  .gallery input[id='photo6']:checked ~ .wrap .overflow {
+  .gallery input[id='photo6']:checked ~ .wrap .gallery-overflow {
     transform: translateX(-45%); }
-  .gallery input[id='photo7']:checked ~ .wrap .overflow {
+  .gallery input[id='photo7']:checked ~ .wrap .gallery-overflow {
     transform: translateX(-67%); }
-  .gallery input[id='photo8']:checked ~ .wrap .overflow {
+  .gallery input[id='photo8']:checked ~ .wrap .gallery-overflow {
     transform: translateX(-67%); }
-  .gallery .overflow {
+  .gallery .gallery-overflow {
     transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1); }
 
 @media (max-width: 768px) {
   .gallery .wrap {
     padding: 0; }
-  .gallery .overflow {
+  .gallery .gallery-overflow {
     width: 300%; } }
 @media (max-width: 650px) {
-  .gallery .overflow label {
+  .gallery .gallery-overflow label {
     width: 10%;
     height: 20%; }
   .gallery .wrap {
