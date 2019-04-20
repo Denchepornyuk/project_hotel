@@ -19,8 +19,8 @@
 	<header class="header">
 		<div class="container">
 			<div class="header-menu__phone">
-				<ul>
-					<li><a href="#">Home</a></li>
+				<ul class="js-links">
+					<li><a href="#home">Home</a></li>
 					<li><a href="#about">About</a></li>
 					<li><a href="#services">Services</a></li>
 					<li><a href="#gallery">Gallery</a></li>
@@ -29,8 +29,8 @@
 				</ul>
 			</div>
 			<nav class="header-navbar">
-				<ul class="header-navbar__links">
-					<li><a href="#">Home</a></li>
+				<ul class="header-navbar__links js-links">
+					<li><a href="#home">Home</a></li>
 					<li><a href="#about">About</a></li>
 					<li><a href="#services">Services</a></li>
 					<li><a href="#gallery">Gallery</a></li>
@@ -42,7 +42,7 @@
 	</header>
 
 	<main>
-		<section class="hero hero__wrap">
+		<section class="hero hero__wrap" id="home">
 			<input type="radio" class="test" name="slider" id="toggle1" checked>
 			<input type="radio" class="test" name="slider" id="toggle2">
 			<input type="radio" class="test" name="slider" id="toggle3">
@@ -643,6 +643,8 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="js/header_scroll.js"></script>
 <script src="js/auto_slider.js"></script>
+<script src="js/scroll_link.js"></script>
+
 
 <!--<script src="js/modal_window.js"></script>-->
 </body>
