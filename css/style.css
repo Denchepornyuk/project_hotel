@@ -616,19 +616,19 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
 
   .services-information_block {
     min-width: 360px;
-    max-height: 16.5%; }
+    max-height: 17%; }
   .services-information .beauty-salon {
-    top: -2%; }
+    top: -6%; }
   .services-information .parking {
-    top: 14%; }
+    top: 11%; }
   .services-information .transfer {
-    top: 30%; }
+    top: 27.5%; }
   .services-information .wardrobe {
-    top: 46%; }
+    top: 44.5%; }
   .services-information .businss-center {
-    top: 62%; }
+    top: 61%; }
   .services-information .wi-fi {
-    top: 78%; } }
+    top: 77.5%; } }
 @media (max-width: 650px) {
   .services-list li {
     width: 300px; }
