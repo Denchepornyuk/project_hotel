@@ -1,7 +1,6 @@
 .services
 	position: relative
 	color: #ffffff
-	padding-top: 55px
 	
 	input
 		display: none
@@ -121,13 +120,23 @@
 			background-color: rgba(0,0,0, .5)
 			padding-top: 40px
 			font-size: 25px
-			
+
 	.services-information
 		max-height: 95%
 
+
 		&_block
 			max-height: 33%
-	
+			
+		
+		.beauty-salon,
+		.parking
+			top: 10%
+
+		.businss-center,
+		.wi-fi
+			bottom: 10%
+
 
 @media (max-width: 991px)
 	.services
@@ -136,6 +145,9 @@
 			color: #FFFF00
 			border: 1px solid #FFFF00
 			+bolt
+	.services-information
+		&_block
+			min-width: 60%
 			
 
 @media (max-width: 768px)
@@ -144,15 +156,44 @@
 			padding-top: 40px
 			font-size: 25px		
 
-		.services-information
-			height: 50%
-			&_block
-				font-size: 15px
+		&-list
+			flex-direction: column
+	.services-information
+		&_block
+			min-width: 360px
+			max-height: 16.5%
+		
+		.beauty-salon
+			top: -2%
 
-			& p .block__close
-				font-size: 20px
-			
+		.parking
+			top: 14%
+
+		.transfer
+			top: 30%
+
+		.wardrobe
+			top: 46%
+
+		.businss-center
+			top: 62%
+
+		.wi-fi
+			top: 78%
 
 @media (max-width: 650px)
+	.services
+		&-list li
+			width: 300px
+		.container
+			padding: 0
 	.services-list_description a
 			margin-top: 40px
+	.services-information
+		&_block
+			min-width: 305px
+			p
+				font-size: 15px
+		& .block__close
+			margin-right: 10%
+			margin-top: 3%

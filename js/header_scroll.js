@@ -3,7 +3,7 @@ $(window).scroll(function() {
         $('header').addClass("scroll");
         $('ul.submenu').addClass('submenu__scroll');
     }  else{
-        $('header').removeClass("scroll submenu__scroll");
+        $('header').removeClass("scroll");
         $('ul.submenu').removeClass('submenu__scroll');
     }
 });

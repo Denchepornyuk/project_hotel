@@ -142,19 +142,20 @@
 
 					<li>
 						<div class="services-list_description">
-							<p>Wardrobe</p>
-							<label class='services__button' for="read-more3">read more</label>
-						</div>
-						<img src="img/services/Wardrobe.jpg" alt="Wardrobe">
-					</li>
-
-					<li>
-						<div class="services-list_description">
 							<p>Transfer</p>
 							<label class='services__button' for="read-more4">read more</label>
 						</div>
 						<img src="img/services/transfer.jpg" alt="Transfer">
 					</li>
+
+					<li>
+						<div class="services-list_description">
+							<p>Wardrobe</p>
+							<label class='services__button' for="read-more3">read more</label>
+						</div>
+						<img src="img/services/Wardrobe.jpg" alt="Wardrobe">
+					</li>
+	
 
 					<li>
 						<div class="services-list_description">
@@ -195,16 +196,6 @@
 							restaurants in it. 
 						</p>
 					</div>
-					<div class="services-information_block wardrobe">
-						<label for="close" class="block__close">
-							<i class="far fa-times-circle"></i>
-						</label>
-						<p>
-							When you visit the «Ukraine» hotel or restaurant in it, you can leave your outerwear 
-							in the wardrobe, which is located in the lobby of the 1st floor. Opening hours are 
-							from 8:00 to 20:00.  
-						</p>
-					</div>
 					<div class="services-information_block transfer">
 						<label for="close" class="block__close">
 							<i class="far fa-times-circle"></i>
@@ -213,6 +204,16 @@
 							To make the trip of our Guests more comfortable taxi service is available for 24 hour.
 							Our receptionists are happy to arrange a comfortable Airport or Railway station pick up
 							for You.  
+						</p>
+					</div>
+					<div class="services-information_block wardrobe">
+						<label for="close" class="block__close">
+							<i class="far fa-times-circle"></i>
+						</label>
+						<p>
+							When you visit the «Ukraine» hotel or restaurant in it, you can leave your outerwear 
+							in the wardrobe, which is located in the lobby of the 1st floor. Opening hours are 
+							from 8:00 to 20:00.  
 						</p>
 					</div>
 					<div class="services-information_block businss-center">
@@ -272,6 +273,10 @@
 				<h2 class="booking-title">Booking room</h2>
 				<span class="booking-phone">+(380) 12-345-6789</span>
 				<div class="booking-room">
+					<input type="radio" name="room_type" id="standart" checked>
+          <input type="radio" name="room_type" id="economy">
+          <input type="radio" name="room_type" id="deluxe" >
+          <input type="radio" name="room_type" id="suite">
 					<form action="#" method="post">
 						<div class="booking-form">
 							<div class="booking-form_personalData">
@@ -293,10 +298,7 @@
 	            				 required>
 							</div>
 
-							<input type="radio" name="room_type" id="standart" checked>
-            	<input type="radio" name="room_type" id="economy">
-            	<input type="radio" name="room_type" id="deluxe">
-            	<input type="radio" name="room_type" id="suite">
+
 							<div class="booking-form_typeRooms">
 								<span>Type of room</span>
 	            	<label for="standart">Standart</label>
@@ -327,15 +329,6 @@
 
 							<div class="booking-block_rooms">
 								<div class="tabbed">
-									<input type="radio" name="tabs" id="tab_1" checked>
-									<label for="tab_1">Standart</label>
-									<input type="radio" name="tabs" id="tab_2">
-									<label for="tab_2">Economy</label>
-									<input type="radio" name="tabs" id="tab_3">
-									<label for="tab_3">Deluxe</label>
-									<input type="radio" name="tabs" id="tab_4">				
-									<label for="tab_4">Suite</label>
-
 									<div class="tabs">
 										<div class="standart_tab">
 												<table class="table_floors">

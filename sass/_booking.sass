@@ -1,8 +1,7 @@
 .booking
-	padding-top: 55px
 	color: white
 
-
+	
 	&-title
 		+regular
 		text-align: center
@@ -29,6 +28,25 @@
 	::-webkit-input-placeholder
 		color: white
 		
+	&-room 
+		input[name="room_type"]
+			display: none
+
+	input[id='standart']:checked ~ form label[for='standart'],
+	input[id='economy']:checked ~ form label[for='economy'],
+	input[id='deluxe']:checked ~ form label[for='deluxe'],
+	input[id='suite']:checked ~ form label[for='suite']
+		border-radius: 50px 50px
+		border: 1px solid white
+		background-color: gray
+
+	input[id='standart']:checked ~ form .tabs div.standart_tab,
+	input[id='economy']:checked ~ form .tabs div.economy_tab,
+	input[id='deluxe']:checked ~ form .tabs div.deluxe_tab, 
+	input[id='suite']:checked ~ form .tabs div.suite_tab
+		opacity: 1
+		
+
 	&-room form
 		display: flex
 		justify-content: space-around
@@ -75,20 +93,13 @@
 					margin-top: 15px
 					cursor: pointer
 
-			input[id='standart']:checked ~ .booking-form_typeRooms label[for='standart'],
-			input[id='economy']:checked ~ .booking-form_typeRooms label[for='economy'],
-			input[id='deluxe']:checked ~ .booking-form_typeRooms label[for='deluxe'],
-			input[id='suite']:checked ~ .booking-form_typeRooms label[for='suite']
-				border-radius: 50px 50px
-				border: 1px solid white
-				background-color: gray
-		
 		.booking-block
 			flex-basis: 75%
 			display: flex
 			justify-content: center
 			flex-direction: column
 			align-items: center
+
 
 			&__button input
 				margin-top: 20px
@@ -111,6 +122,7 @@
 			.booking-block_rooms
 				width: 100%
 				position: relative
+				margin-top: 25px
 
 				.tabbed
 					margin-top: 10px
@@ -132,16 +144,12 @@
 				.tabbed .tabs div
 					position: absolute
 					opacity: 0
+					left: 0
 					width: 93%
 					padding: 20px
-
 					border: 2px solid gray
 
-				.tabbed input[id="tab_1"]:checked ~ .tabs div.standart_tab,
-				.tabbed input[id="tab_2"]:checked ~ .tabs div.economy_tab,
-				.tabbed input[id="tab_3"]:checked ~ .tabs div.deluxe_tab,
-				.tabbed input[id="tab_4"]:checked ~ .tabs div.suite_tab
-					opacity: 1
+
 
 				.tabbed table
 					font-size: 25px
@@ -169,7 +177,6 @@
 
 @media (max-width: 1199px)
 	.booking
-
 		&-phone
 			margin-left: 4%
 		
@@ -221,18 +228,22 @@
 					margin-bottom: 10px
 
 		.booking-block_rooms
-			height: 500px
+			margin-left: 50px
+			height: 450px
 
 @media (max-width: 650px)
 	.booking
 		&-room form
+			.booking-form
+				margin: 0
 			.booking-block
 				&_day
 					flex-direction: column
-					width: 60%
+					width: 100%
 			
 				.booking-block_rooms
 					.tabbed 
+						padding: 0
 						.tabs
 							table
 								margin-right: 90px
@@ -241,6 +252,19 @@
 						.tabs div
 							border: none
 							padding: 0px
+							left: auto
+
+						.tabs .standart_tab
+							left: -28%
+
+						.tabs .economy_tab,
+						.tabs .deluxe_tab,
+						.tabs .suite_tab
+							left: 5%
 
 					.tabbed label
 						font-size: 15px	
+		
+		.booking-block_rooms
+			margin: 0
+			height: 350px

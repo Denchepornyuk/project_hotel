@@ -50,7 +50,7 @@
 
 label[for="menu"]
 	display: none
-	color: #000000
+	color: #ffffff
 	cursor: pointer
 	position: fixed
 	right: 5%
@@ -58,7 +58,6 @@ label[for="menu"]
 	z-index: 2
 
 input[id="menu"]:checked ~ label[for="menu"]
-	color: #ffffff
 	z-index: 2
 	
 input[id="menu"]:checked ~ .header .header-navbar__links
@@ -67,6 +66,8 @@ input[id="menu"]:checked ~ .header .header-navbar__links
 	transition-duration: 0.3s
 
 @media (max-width: 650px)
+	.scroll
+		border: none
 	.header
 		&-navbar__links 
 			flex-direction: column
