@@ -46,6 +46,9 @@ body {
 
   .wrap {
     border-radius: 0; } }
+.toggle_menu {
+  display: none; }
+
 .scroll {
   background-image: url("../img/background.jpg");
   border: 1px solid #000000;
@@ -71,13 +74,15 @@ body {
         -ms-flex-align: center;
             align-items: center;
     text-align: center; }
-  .header-navbar__links li {
+  .header-navbar__links li a {
+    outline: none; }
+  .header-navbar__links > li {
     border-right: 1px solid #babbbb;
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%; }
-  .header-navbar__links li:first-of-type {
+  .header-navbar__links > li:first-of-type {
     border-left: 1px solid #babbbb; }
-  .header-navbar__links a, .header-menu__phone a {
+  .header-navbar__links a {
     font-family: 'Proxima Nova Semibold', sans-serif;
     color: #ffffff;
     text-decoration: none;
@@ -89,22 +94,6 @@ body {
     color: #BDBDBD;
     -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s; }
-  .header-menu__phone {
-    position: absolute;
-    background-image: url("../img/background.jpg");
-    width: 100%;
-    left: 0;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-    opacity: 0; }
-  .header-menu__phone ul {
-    list-style: none;
-    text-align: center;
-    padding: 0; }
-  .header-menu__phone ul li {
-    padding-top: 10px; }
 
 label[for="menu"] {
   display: none;
@@ -115,14 +104,11 @@ label[for="menu"] {
   margin-top: 25px;
   z-index: 2; }
 
-.toggle_menu {
-  display: none; }
-
 input[id="menu"]:checked ~ label[for="menu"] {
   color: #ffffff;
   z-index: 2; }
 
-input[id="menu"]:checked ~ .header .header-menu__phone {
+input[id="menu"]:checked ~ .header .header-navbar__links {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
   opacity: 1;
@@ -130,14 +116,81 @@ input[id="menu"]:checked ~ .header .header-menu__phone {
           transition-duration: 0.3s; }
 
 @media (max-width: 650px) {
-  .header {
+  .header-navbar__links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    background-image: url("../img/background.jpg");
+    width: 100%;
+    left: 0;
+    margin: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    opacity: 0; }
+  .header-navbar__links li {
+    border: none;
+    padding-top: 20px; }
+  .header-navbar__links li:first-of-type {
     border: none; }
-    .header-navbar {
-      display: none; }
+  .header-navbar__links li:last-of-type {
+    padding-bottom: 20px; }
 
   label[for="menu"] {
     display: block;
     font-size: 20px; } }
+.submenu__scroll {
+  background-image: url("../img/background.jpg");
+  border: 2px solid #808080; }
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  padding-top: 5px;
+  margin-top: 15.5px;
+  width: 195px;
+  display: none;
+  border-top: none;
+  border-radius: 0 0 50px 50px; }
+
+.submenu li {
+  text-align: center;
+  margin-bottom: 5px;
+  width: 100%; }
+
+.submenu li a {
+  font-size: 14px; }
+
+.header-navbar__links li:hover .submenu,
+.submenu li:hover {
+  display: block; }
+
+.header-navbar__links > li > a {
+  padding: 0 30%;
+  padding-bottom: 16px;
+  text-align: center; }
+
+@media (max-width: 1199px) {
+  .submenu {
+    width: 175px; }
+
+  a[href="#rooms"] .submenu li {
+    width: 155px; } }
+@media (max-width: 991px) {
+  .submenu {
+    width: 130px; }
+
+  .header-navbar__links > li > a {
+    padding: 0;
+    padding-bottom: 16px; } }
+@media (max-width: 768px) {
+  .submenu {
+    width: 15.5%; } }
 .hero__wrap {
   width: 100%;
   height: 100vh;
@@ -186,7 +239,7 @@ input[id="menu"]:checked ~ .header .header-menu__phone {
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .hero .switches label {
-    border: 1px solid #57D3FF;
+    border: 1px solid #000000;
     border-radius: 50px;
     height: 15px;
     width: 15px;
@@ -196,7 +249,7 @@ input[id="menu"]:checked ~ .header .header-menu__phone {
   .hero input[id="toggle3"]:checked ~ .switches label:nth-child(3),
   .hero input[id="toggle4"]:checked ~ .switches label:nth-child(4),
   .hero input[id="toggle5"]:checked ~ .switches label:nth-child(5) {
-    background-color: #57D3FF; }
+    background-color: #000000; }
   .hero #toggle1:checked ~ .overflow .images {
     -webkit-transform: translateX(0%);
             transform: translateX(0%); }
@@ -218,8 +271,8 @@ input[id="menu"]:checked ~ .header .header-menu__phone {
   .hero-header {
     position: absolute;
     top: 35%;
-    left: 5%;
-    width: 90%;
+    left: auto;
+    width: 1170px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -235,7 +288,7 @@ input[id="menu"]:checked ~ .header .header-menu__phone {
           flex-basis: 15%;
       text-align: center;
       font-size: 18px;
-      color: #ffffff; }
+      color: #000000; }
     .hero-header_phone span {
       display: block; }
     .hero-header_title {
@@ -244,13 +297,39 @@ input[id="menu"]:checked ~ .header .header-menu__phone {
     .hero-header_search {
       -ms-flex-preferred-size: 15%;
           flex-basis: 15%;
-      text-align: center; }
+      background: #000000;
+      position: relative;
+      border-radius: 10px; }
+      .hero-header_search input {
+        width: 100%;
+        height: 42px;
+        padding-left: 10px;
+        border: 2px solid #000000;
+        border-radius: 5px;
+        outline: none;
+        background: #F9F0DA;
+        color: #9E9C9C; }
+      .hero-header_search button {
+        position: absolute;
+        top: 0;
+        right: 0px;
+        width: 42px;
+        height: 42px;
+        border: none;
+        background: #000000;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        color: #ffffff; }
+      .hero-header_search button:focus {
+        outline: none; }
       .hero-header_search input {
         width: 90%; }
 
 @media (max-width: 1199px) {
   .hero {
     height: 900px; }
+    .hero-header {
+      width: 960px; }
     .hero .images div {
       height: 900px; }
     .hero .images div::before {
@@ -258,6 +337,8 @@ input[id="menu"]:checked ~ .header .header-menu__phone {
 @media (max-width: 991px) {
   .hero {
     height: 700px; }
+    .hero-header {
+      width: 760px; }
     .hero .images div {
       height: 700px; }
     .hero .images div::before {
@@ -271,6 +352,8 @@ input[id="menu"]:checked ~ .header .header-menu__phone {
 @media (max-width: 768px) {
   .hero {
     height: 550px; }
+    .hero-header {
+      width: 100%; }
     .hero .images div {
       height: 550px; }
     .hero .images div::before {
@@ -290,6 +373,8 @@ input[id="menu"]:checked ~ .header .header-menu__phone {
 @media (max-width: 650px) {
   .hero {
     height: 400px; }
+    .hero-header {
+      left: 0; }
     .hero .images div {
       height: 400px; }
     .hero .images div::before {
@@ -491,16 +576,17 @@ input[id="menu"]:checked ~ .header .header-menu__phone {
     transition: 0.5s ease-in-out; }
 
 @media (max-width: 1199px) {
-  .services-information {
-    max-height: 95%; }
-    .services-information_block {
-      max-height: 33%; } }
-@media (max-width: 991px) {
   .services-list_description {
     top: 0%;
     background-color: rgba(0, 0, 0, 0.5);
     padding-top: 40px;
     font-size: 25px; }
+
+  .services-information {
+    max-height: 95%; }
+    .services-information_block {
+      max-height: 33%; } }
+@media (max-width: 991px) {
   .services-list_description a {
     font-size: 15px;
     color: #FFFF00;
@@ -637,7 +723,8 @@ input[id="menu"]:checked ~ .header .header-menu__phone {
     border-radius: inherit;
     padding-left: 10px;
     width: 100%;
-    color: white; }
+    color: white;
+    outline: none; }
   .booking label {
     font-size: 18px; }
   .booking ::-webkit-input-placeholder {
@@ -896,4 +983,5 @@ input[id="menu"]:checked ~ .header .header-menu__phone {
     text-align: center; }
   .footer__title {
     margin-top: 0px; } }
+
 /*# sourceMappingURL=style.css.map */

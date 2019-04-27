@@ -1,0 +1,53 @@
+.submenu__scroll
+	background-image: url('../img/background.jpg')
+	border: 2px solid #808080
+
+.submenu
+	list-style: none
+	padding: 0
+	margin: 0
+	position: absolute
+	padding-top: 5px
+	margin-top: 15.5px
+	width: 195px
+	display: none
+	border-top: none
+	border-radius: 0 0 50px 50px
+
+.submenu li
+	text-align: center
+	margin-bottom: 5px
+	width: 100%
+
+.submenu li a
+	font-size: 14px
+
+.header-navbar__links li:hover .submenu,
+.submenu li:hover 
+	display: block
+
+.header-navbar__links > li>a
+	padding: 0 30%
+	padding-bottom: 16px
+	text-align: center
+
+
+
+@media (max-width: 1199px)
+	.submenu
+		width: 175px
+
+	a[href="#rooms"] .submenu li
+		width: 155px
+
+
+@media (max-width: 991px)
+	.submenu
+		width: 130px	
+	.header-navbar__links > li>a
+		padding: 0
+		padding-bottom: 16px
+
+@media (max-width: 768px)
+	.submenu
+		width: 15.5%

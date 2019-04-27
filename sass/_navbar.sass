@@ -1,3 +1,6 @@
+.toggle_menu
+	display: none
+
 .scroll
 	background-image: url('../img/background.jpg')
 	border: 1px solid #000000
@@ -20,15 +23,18 @@
 		align-items: center
 		text-align: center
 
-	&-navbar__links li
+	&-navbar__links li a
+		outline: none
+
+
+	&-navbar__links>li
 		border-right: 1px solid #babbbb
 		flex-basis: 20%
 
-	&-navbar__links li:first-of-type
+	&-navbar__links>li:first-of-type
 		border-left: 1px solid #babbbb 
 
-	&-navbar__links a,
-	&-menu__phone a
+	&-navbar__links a
 		+bolt
 		color: #ffffff
 		text-decoration: none
@@ -40,22 +46,6 @@
 		color: #BDBDBD
 		transition-duration: 0.3s
 
-	&-menu__phone
-		position: absolute
-		background-image: url('../img/background.jpg')
-		width: 100%
-		left: 0
-		transform: translateY(-100%)
-		transition-duration: 0.3s
-		opacity: 0
-
-	&-menu__phone ul
-		list-style: none
-		text-align: center
-		padding: 0
-
-	&-menu__phone ul li 
-		padding-top: 10px
 
 
 label[for="menu"]
@@ -67,25 +57,39 @@ label[for="menu"]
 	margin-top: 25px
 	z-index: 2
 
-.toggle_menu
-	display: none
-
 input[id="menu"]:checked ~ label[for="menu"]
 	color: #ffffff
 	z-index: 2
 	
-input[id="menu"]:checked ~ .header .header-menu__phone 
+input[id="menu"]:checked ~ .header .header-navbar__links
 	transform: translateY(0%)
 	opacity: 1
 	transition-duration: 0.3s
 
 @media (max-width: 650px)
 	.header
-		border: none
+		&-navbar__links 
+			flex-direction: column
+			position: absolute
+			background-image: url('../img/background.jpg')
+			width: 100%
+			left: 0
+			margin: 0
+			transform: translateY(-100%)
+			transition-duration: 0.3s
+			opacity: 0
 
-		&-navbar 
-			display: none
+		&-navbar__links li
+			border: none
+			padding-top: 20px
+
+		&-navbar__links li:first-of-type
+			border: none
+
+		&-navbar__links li:last-of-type
+			padding-bottom: 20px
 
 	label[for="menu"]
 		display: block
 		font-size: 20px
+
