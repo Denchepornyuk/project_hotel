@@ -31,8 +31,10 @@ body {
 .wrap {
   background-image: url("../img/background.jpg");
   border: 2px solid #808080;
-  border-radius: 50px 50px;
-  margin-top: 55px; }
+  border-radius: 50px 50px; }
+
+section:not(:first-of-type) {
+  padding-top: 55px; }
 
 @media (max-width: 1199px) {
   .container {
@@ -990,6 +992,162 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
   .booking .booking-block_rooms {
     margin: 0;
     height: 350px; } }
+.review {
+  color: #ffffff;
+  position: relative; }
+  .review-title {
+    text-align: center;
+    font-family: 'Queen Rosie Regular', sans-serif; }
+  .review-people {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: auto;
+    padding: 0; }
+    .review-people li > img {
+      width: 200px;
+      height: 200px;
+      border-radius: 100px 100px; }
+    .review-people li {
+      margin: 10px;
+      -ms-flex-preferred-size: 30%;
+          flex-basis: 30%;
+      border: 2px solid #808080;
+      border-radius: 50px 50px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 10px;
+      height: 400px;
+      overflow: auto;
+      background-color: rgba(128, 128, 128, 0.3);
+      text-overflow: ellipsis; }
+    .review-people ::-webkit-scrollbar {
+      display: none; }
+    .review-people__name {
+      font-size: 18px;
+      font-family: 'Proxima Nova Semibold', sans-serif;
+      margin: 10px; }
+    .review-people__text {
+      font-size: 18px;
+      margin: 0 5px;
+      margin-top: 5px; }
+    .review-people__mark {
+      wrap: normal; }
+      .review-people__mark img {
+        width: 25px;
+        height: 25px;
+        -webkit-transform: rotate(35deg);
+                transform: rotate(35deg); }
+    .review-people__add {
+      font-size: 150px;
+      margin: auto;
+      cursor: pointer; }
+  .review .add-person {
+    display: none; }
+  .review .add-person__block {
+    border: 1px solid #808080;
+    border-radius: 50px 50px;
+    position: absolute;
+    background-image: url("../img/background.jpg");
+    width: 40%;
+    height: 70%;
+    top: 10%;
+    left: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 30px 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-family: 'Proxima Nova Semibold', sans-serif; }
+  .review .add-person__wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0; }
+  .review .add-person__block > i {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 30px;
+    cursor: pointer; }
+  .review .add-person__photo input {
+    display: none; }
+  .review .add-person__photo i {
+    font-size: 100px;
+    cursor: pointer; }
+  .review .add-person__photo p {
+    text-align: center;
+    font-size: 18px; }
+  .review .add-person__mark {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    padding: 0; }
+  .review .add-person__mark input {
+    display: none; }
+  .review .add-person__mark label:before {
+    display: inline-block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url("../img/review/star_empty.png") no-repeat;
+    background-size: 100%; }
+  .review .add-person__mark label:hover ~ label,
+  .review .add-person__mark label:hover,
+  .review .add-person__mark input:checked ~ label {
+    display: inline-block;
+    background: url("../img/review/star_full.png") no-repeat;
+    background-size: 100%; }
+  .review .add-person__text {
+    width: 80%;
+    height: 50%;
+    resize: none;
+    border-radius: 50px 50px;
+    padding: 10px;
+    padding-left: 30px;
+    outline: none;
+    wrap: normal;
+    background-color: rgba(128, 128, 128, 0.4);
+    color: #ffffff; }
+  .review .add-person__button {
+    border-radius: 50px 50px;
+    background-color: #ffffff;
+    border: none;
+    text-transform: uppercase;
+    height: 30px;
+    cursor: pointer;
+    outline: none; }
+  .review .add-person__button:hover {
+    background-color: #737373; }
+
 .map {
   padding-top: 55px; }
 

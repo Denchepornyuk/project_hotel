@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEC,eAAS;EACR,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,SAAS,EAAE,IAAI;EAGf,sBAAM;IACL,KAAK,EAAE,KAAK;IACZ,MAAM,EAAE,KAAK;IACb,aAAa,EAAE,WAAW;EAE3B,kBAAE;IACD,MAAM,EAAE,IAAI;IACZ,UAAU,EAAE,GAAG",
+"sources": ["_review.sass"],
+"names": [],
+"file": "_review.css"
+}

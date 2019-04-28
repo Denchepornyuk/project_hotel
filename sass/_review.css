@@ -1,0 +1,14 @@
+.review--people {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+  .review--people li img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px 100px; }
+  .review--people li {
+    margin: 10px;
+    flex-basis: 30%; }
+
+/*# sourceMappingURL=_review.css.map */
