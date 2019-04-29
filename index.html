@@ -44,7 +44,7 @@
 						</ul>
 					</li>
 					<li><a href="#review">Reviews</a></li>
-					<li><a href="#location">Location</a></li>
+					<li><a href="#map">Location</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -724,14 +724,13 @@
 
 
 
-		<div class="map" id="location">
-			<script 
-				type="text/javascript" 	
-				charset="utf-8" async 
-				src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A44c63dc83524bbaefcf4b6d36d7066e18cafd099ce66a5a4257b8b0917326619&amp;
-						 width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=flase">
-			</script>
-		</div>
+		<div class="map" id="map"></div>
+		<script src="js/map.js"></script>	
+		<script
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8CPy28e50UjCCXDtrTj1XnZ2R-GESJoc&callback=initMap" 
+			async defer>
+		</script>
+		
 	</main>
 
 	<footer class="footer">
