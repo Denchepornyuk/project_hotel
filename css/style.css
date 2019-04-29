@@ -746,7 +746,7 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
   .gallery .wrap {
     height: 300px; } }
 .booking {
-  color: white; }
+  color: #ffffff; }
   .booking-title {
     font-family: 'Queen Rosie Regular', sans-serif;
     text-align: center; }
@@ -756,17 +756,17 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
   .booking input {
     margin-bottom: 10px;
     height: 30px;
-    background-color: gray;
-    border: 1px solid white;
+    background-color: #808080;
+    border: 1px solid #ffffff;
     border-radius: inherit;
     padding-left: 10px;
     width: 100%;
-    color: white;
+    color: #ffffff;
     outline: none; }
   .booking label {
     font-size: 18px; }
   .booking ::-webkit-input-placeholder {
-    color: white; }
+    color: #ffffff; }
   .booking-room input[name="room_type"] {
     display: none; }
   .booking input[id='standart']:checked ~ form label[for='standart'],
@@ -774,8 +774,8 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
   .booking input[id='deluxe']:checked ~ form label[for='deluxe'],
   .booking input[id='suite']:checked ~ form label[for='suite'] {
     border-radius: 50px 50px;
-    border: 1px solid white;
-    background-color: gray; }
+    border: 1px solid #ffffff;
+    background-color: #808080; }
   .booking input[id='standart']:checked ~ form .tabs div.standart_tab,
   .booking input[id='economy']:checked ~ form .tabs div.economy_tab,
   .booking input[id='deluxe']:checked ~ form .tabs div.deluxe_tab,
@@ -808,7 +808,7 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
           flex-wrap: wrap;
       margin-left: 10px; }
       .booking-room form .booking-form_personalData {
-        border: 2px solid grey;
+        border: 2px solid #808080;
         padding: 20px;
         border-radius: 50px 50px;
         text-align: center; }
@@ -824,7 +824,7 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
         text-align: center;
-        border: 2px solid gray;
+        border: 2px solid #808080;
         border-radius: 50px 50px;
         padding: 20px;
         margin-bottom: 20px; }
@@ -861,7 +861,7 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
         cursor: pointer; }
       .booking-room form .booking-block_day {
         width: 100%;
-        border: 2px solid gray;
+        border: 2px solid #808080;
         border-radius: 50px 50px;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -893,14 +893,14 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
           border-radius: 50px 0; }
         .booking-room form .booking-block .booking-block_rooms .tabbed label:hover,
         .booking-room form .booking-block .booking-block_rooms .tabbed input:checked + label {
-          background-color: gray; }
+          background-color: #808080; }
         .booking-room form .booking-block .booking-block_rooms .tabbed .tabs div {
           position: absolute;
           opacity: 0;
           left: 0;
           width: 93%;
           padding: 20px;
-          border: 2px solid gray; }
+          border: 2px solid #808080; }
         .booking-room form .booking-block .booking-block_rooms .tabbed table {
           font-size: 25px;
           width: 100%;
@@ -911,13 +911,13 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
         .booking-room form .booking-block .booking-block_rooms .tabbed table tr:nth-child(6) td,
         .booking-room form .booking-block .booking-block_rooms .tabbed table tr:nth-child(8) td {
           width: 30px;
-          border: 1px solid gray;
+          border: 1px solid #808080;
           border-radius: 50px 50px; }
         .booking-room form .booking-block .booking-block_rooms .tabbed table span {
-          color: white; }
+          color: #ffffff; }
         .booking-room form .booking-block .booking-block_rooms .tabbed table tr td.book {
-          border: 1px solid red;
-          background-color: gray; }
+          border: 1px solid #FF0000;
+          background-color: #808080; }
 
 @media (max-width: 1199px) {
   .booking-phone {
@@ -1036,9 +1036,8 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
               align-items: center;
       padding: 10px;
       height: 400px;
-      overflow: auto;
-      background-color: rgba(128, 128, 128, 0.3);
-      text-overflow: ellipsis; }
+      overflow: scroll;
+      background-color: rgba(128, 128, 128, 0.3); }
     .review-people ::-webkit-scrollbar {
       display: none; }
     .review-people__name {
@@ -1069,7 +1068,7 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
     background-image: url("../img/background.jpg");
     width: 40%;
     height: 70%;
-    top: 10%;
+    top: 20%;
     left: 30%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1147,13 +1146,33 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
   .review .add-person__block {
     height: 600px;
     top: 40%; } }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .review .add-person__block {
-    height: 600px;
     width: 50%;
     left: 25%;
-    top: 75%; } }
+    top: 50%; } }
+@media (max-width: 768px) {
+  .review-people {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .review-people li {
+      width: 350px; }
+  .review .add-person__block {
+    height: 400px;
+    width: 50%;
+    left: 25%;
+    top: 82%; } }
 @media (max-width: 650px) {
+  .review-people li {
+    width: 300px; }
   .review .add-person__block {
     height: 450px;
     width: 80%;

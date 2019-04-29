@@ -30,15 +30,13 @@
 			align-items: center
 			padding: 10px
 			height: 400px
-			overflow: auto
+			overflow: scroll
 			background-color: rgba(128, 128, 128, .3)
-			text-overflow: ellipsis
+			
 
 		::-webkit-scrollbar 
 			display: none
 
-
-		
 		&__name
 			font-size: 18px
 			+bolt
@@ -48,6 +46,7 @@
 			font-size: 18px
 			margin: 0 5px
 			margin-top: 5px
+			
 
 		&__mark
 			wrap: normal
@@ -70,7 +69,7 @@
 		background-image: url("../img/background.jpg")
 		width: 40%
 		height: 70%
-		top: 10%
+		top: 20%
 		left: 30%
 		display: flex
 		justify-content: space-around
@@ -152,16 +151,33 @@
 			height: 600px
 			top: 40%
 
-@media (max-width: 768px)
+@media (max-width: 991px)
 	.review
 		.add-person__block
-			height: 600px
 			width: 50%
 			left: 25%
-			top: 75%
+			top: 50%
+
+@media (max-width: 768px)
+	.review
+		&-people
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			li
+				width: 350px
+
+		.add-person__block
+			height: 400px
+			width: 50%
+			left: 25%
+			top: 82%
 
 @media (max-width: 650px)
 	.review
+		&-people
+			li
+				width: 300px
 		.add-person__block
 			height: 450px
 			width: 80%
