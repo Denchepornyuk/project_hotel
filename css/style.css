@@ -44,8 +44,7 @@ section:not(:first-of-type) {
     max-width: 760px; } }
 @media (max-width: 768px) {
   .container {
-    max-width: 100%;
-    padding: 0 30px; }
+    max-width: 100%; }
 
   .wrap {
     border-radius: 0; } }
@@ -620,15 +619,15 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
     min-width: 360px;
     max-height: 17%; }
   .services-information .beauty-salon {
-    top: -6%; }
+    top: -2.5%; }
   .services-information .parking {
-    top: 11%; }
+    top: 14%; }
   .services-information .transfer {
-    top: 27.5%; }
+    top: 30%; }
   .services-information .wardrobe {
-    top: 44.5%; }
+    top: 45.5%; }
   .services-information .businss-center {
-    top: 61%; }
+    top: 61.5%; }
   .services-information .wi-fi {
     top: 77.5%; } }
 @media (max-width: 650px) {
@@ -1018,8 +1017,8 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
       border-radius: 100px 100px; }
     .review-people li {
       margin: 10px;
-      -ms-flex-preferred-size: 30%;
-          flex-basis: 30%;
+      -ms-flex-preferred-size: 350px;
+          flex-basis: 350px;
       border: 2px solid #808080;
       border-radius: 50px 50px;
       display: -webkit-box;
@@ -1086,12 +1085,6 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
         -ms-flex-direction: column;
             flex-direction: column;
     font-family: 'Proxima Nova Semibold', sans-serif; }
-  .review .add-person__wrap {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0; }
   .review .add-person__block > i {
     position: absolute;
     top: 3%;
@@ -1109,7 +1102,8 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
   .review .add-person__mark {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
-    padding: 0; }
+    padding: 0;
+    margin-bottom: 10px; }
   .review .add-person__mark input {
     display: none; }
   .review .add-person__mark label:before {
@@ -1136,7 +1130,8 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
     outline: none;
     wrap: normal;
     background-color: rgba(128, 128, 128, 0.4);
-    color: #ffffff; }
+    color: #ffffff;
+    margin-bottom: 10px; }
   .review .add-person__button {
     border-radius: 50px 50px;
     background-color: #ffffff;
@@ -1148,6 +1143,22 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
   .review .add-person__button:hover {
     background-color: #737373; }
 
+@media (max-width: 1199px) {
+  .review .add-person__block {
+    height: 600px;
+    top: 40%; } }
+@media (max-width: 768px) {
+  .review .add-person__block {
+    height: 600px;
+    width: 50%;
+    left: 25%;
+    top: 75%; } }
+@media (max-width: 650px) {
+  .review .add-person__block {
+    height: 450px;
+    width: 80%;
+    left: 10%;
+    top: 80%; } }
 .map {
   padding-top: 55px; }
 
