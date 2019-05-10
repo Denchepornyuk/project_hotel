@@ -2,7 +2,7 @@
 	display: none
 
 .scroll
-	background-image: url('../img/background.jpg')
+	background-image: url('../img/background/background.jpg')
 	border: 1px solid #000000
 	border-bottom: 3px solid #808080
 	-webkit-transition: all 0.5s ease
@@ -15,7 +15,7 @@
 	z-index: 1
 
 
-	&-navbar__links
+	&-navbar__links 
 		list-style: none
 		padding: 0
 		display: flex
@@ -30,6 +30,7 @@
 	&-navbar__links>li
 		border-right: 1px solid #babbbb
 		flex-basis: 20%
+		position: relative
 
 	&-navbar__links>li:first-of-type
 		border-left: 1px solid #babbbb 
@@ -72,7 +73,7 @@ input[id="menu"]:checked ~ .header .header-navbar__links
 		&-navbar__links 
 			flex-direction: column
 			position: absolute
-			background-image: url('../img/background.jpg')
+			background-image: url('../img/background/background.jpg')
 			width: 100%
 			left: 0
 			margin: 0
