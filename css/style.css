@@ -49,6 +49,9 @@ section:not(:first-of-type) {
 
   .wrap {
     border-radius: 0; } }
+@media (max-width: 650px) {
+  section:not(:first-of-type) {
+    padding-top: 20px; } }
 .toggle_menu {
   display: none; }
 
@@ -541,7 +544,7 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
       height: 50%;
       font-size: 20px;
       border-radius: 50px 50px;
-      background-image: url("../img/background.jpg");
+      background-image: url("../img/background/background.jpg");
       opacity: 0.95;
       -webkit-transition: inherit;
       transition: inherit;
@@ -611,13 +614,13 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
     min-width: 360px;
     max-height: 17%; }
   .services-information .beauty-salon {
-    top: -2.5%; }
+    top: -4.5%; }
   .services-information .parking {
-    top: 14%; }
+    top: 12%; }
   .services-information .transfer {
-    top: 30%; }
+    top: 28.5%; }
   .services-information .wardrobe {
-    top: 45.5%; }
+    top: 45%; }
   .services-information .businss-center {
     top: 61.5%; }
   .services-information .wi-fi {
@@ -737,6 +740,10 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
     height: 20%; }
   .gallery .wrap {
     height: 300px; } }
+.select-room {
+  background-color: #AFD9D6;
+  border-color: #FF0000; }
+
 .booking {
   color: #ffffff; }
   .booking-title {
@@ -772,7 +779,8 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
   .booking input[id='economy']:checked ~ form .tabs div.economy_tab,
   .booking input[id='deluxe']:checked ~ form .tabs div.deluxe_tab,
   .booking input[id='suite']:checked ~ form .tabs div.suite_tab {
-    opacity: 1; }
+    opacity: 1;
+    display: block; }
   .booking-room form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -871,7 +879,8 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
       .booking-room form .booking-block .booking-block_rooms {
         width: 100%;
         position: relative;
-        margin-top: 25px; }
+        margin-top: 25px;
+        margin-left: 6%; }
         .booking-room form .booking-block .booking-block_rooms .tabbed {
           margin-top: 10px;
           padding: 0 30px; }
@@ -889,6 +898,7 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
         .booking-room form .booking-block .booking-block_rooms .tabbed .tabs div {
           position: absolute;
           opacity: 0;
+          display: none;
           left: 0;
           width: 93%;
           padding: 20px;
@@ -904,7 +914,8 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
         .booking-room form .booking-block .booking-block_rooms .tabbed table tr:nth-child(8) td {
           width: 30px;
           border: 1px solid #808080;
-          border-radius: 50px 50px; }
+          border-radius: 50px 50px;
+          cursor: pointer; }
         .booking-room form .booking-block .booking-block_rooms .tabbed table span {
           color: #ffffff; }
         .booking-room form .booking-block .booking-block_rooms .tabbed table tr td.book {
@@ -952,7 +963,6 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
         width: 300px;
         margin-bottom: 10px; }
     .booking .booking-block_rooms {
-      margin-left: 50px;
       height: 450px; } }
 @media (max-width: 650px) {
   .booking-room form .booking-form {
@@ -963,23 +973,25 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%; }
-  .booking-room form .booking-block .booking-block_rooms .tabbed {
-    padding: 0; }
-    .booking-room form .booking-block .booking-block_rooms .tabbed .tabs table {
-      margin-right: 90px;
+  .booking-room form .booking-block .booking-block_rooms {
+    margin-left: 0; }
+    .booking-room form .booking-block .booking-block_rooms .tabbed {
+      padding: 0; }
+      .booking-room form .booking-block .booking-block_rooms .tabbed .tabs table {
+        margin-right: 90px;
+        font-size: 15px; }
+      .booking-room form .booking-block .booking-block_rooms .tabbed .tabs div {
+        border: none;
+        padding: 0px;
+        left: auto; }
+      .booking-room form .booking-block .booking-block_rooms .tabbed .tabs .standart_tab {
+        left: -28%; }
+      .booking-room form .booking-block .booking-block_rooms .tabbed .tabs .economy_tab,
+      .booking-room form .booking-block .booking-block_rooms .tabbed .tabs .deluxe_tab,
+      .booking-room form .booking-block .booking-block_rooms .tabbed .tabs .suite_tab {
+        left: 5%; }
+    .booking-room form .booking-block .booking-block_rooms .tabbed label {
       font-size: 15px; }
-    .booking-room form .booking-block .booking-block_rooms .tabbed .tabs div {
-      border: none;
-      padding: 0px;
-      left: auto; }
-    .booking-room form .booking-block .booking-block_rooms .tabbed .tabs .standart_tab {
-      left: -28%; }
-    .booking-room form .booking-block .booking-block_rooms .tabbed .tabs .economy_tab,
-    .booking-room form .booking-block .booking-block_rooms .tabbed .tabs .deluxe_tab,
-    .booking-room form .booking-block .booking-block_rooms .tabbed .tabs .suite_tab {
-      left: 5%; }
-  .booking-room form .booking-block .booking-block_rooms .tabbed label {
-    font-size: 15px; }
   .booking .booking-block_rooms {
     margin: 0;
     height: 350px; } }
@@ -1028,10 +1040,8 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
               align-items: center;
       padding: 10px;
       height: 400px;
-      overflow: scroll;
+      overflow: hidden;
       background-color: rgba(128, 128, 128, 0.3); }
-    .review-people ::-webkit-scrollbar {
-      display: none; }
     .review-people__name {
       font-size: 18px;
       font-family: 'Proxima Nova Semibold', sans-serif;
@@ -1039,7 +1049,13 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
     .review-people__text {
       font-size: 18px;
       margin: 0 5px;
-      margin-top: 5px; }
+      margin-top: 5px;
+      overflow-y: scroll;
+      scrollbar-width: none;
+      -ms-overflow-style: none; }
+    .review-people ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; }
     .review-people__mark {
       wrap: normal; }
       .review-people__mark img {
@@ -1059,7 +1075,7 @@ input[id="menu"]:checked ~ .header .header-navbar__links {
     position: absolute;
     background-image: url("../img/background/background.jpg");
     width: 40%;
-    height: 70%;
+    height: 60%;
     top: 20%;
     left: 30%;
     display: -webkit-box;

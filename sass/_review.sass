@@ -30,13 +30,9 @@
 			align-items: center
 			padding: 10px
 			height: 400px
-			overflow: scroll
+			overflow: hidden
 			background-color: rgba(128, 128, 128, .3)
 			
-
-		::-webkit-scrollbar 
-			display: none
-
 		&__name
 			font-size: 18px
 			+bolt
@@ -46,6 +42,13 @@
 			font-size: 18px
 			margin: 0 5px
 			margin-top: 5px
+			overflow-y: scroll
+			scrollbar-width: none
+			-ms-overflow-style: none
+		
+		::-webkit-scrollbar 
+			width: 0px
+			background: transparent
 			
 
 		&__mark
@@ -68,7 +71,7 @@
 		position: absolute
 		background-image: url("../img/background/background.jpg")
 		width: 40%
-		height: 70%
+		height: 60%
 		top: 20%
 		left: 30%
 		display: flex

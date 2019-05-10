@@ -10,7 +10,7 @@ $(window).scroll(function() {
 });
 
 //smooth transition of links in menu
-jQuery(function($){
+$(function($){
 	$(".js-links").on("click","a", function (event) {
 		event.preventDefault();
 		var id  = $(this).attr('href'),
@@ -31,7 +31,7 @@ setInterval(function(){
 }, 4000);
 
 //modal window add comment
-jQuery(function($){
+$(function($){
 	$('.js-people__add').on('click', function(){
 		$('.add-person').css('display', 'block');
 	});
@@ -48,5 +48,27 @@ jQuery(function($){
 	});
 });
 
+//booking room
+$(function($){
+	let count = 0;
+	$('.tabs tr:odd td').on('click', function(){
+		count++;
 
+		if(!($(this).hasClass('book')) && 
+			 !($(this).hasClass('select-room'))){
+			if(count < 2){
+				$(this).addClass('select-room');
+			}
+			else
+				alert('You have already chosen a room!')
+		}
 
+		else if($(this).hasClass('select-room')){
+			$(this).removeClass('select-room');
+			count = 0;
+		}
+
+		else
+			alert('Room is booked')
+	})
+})
