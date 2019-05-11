@@ -51,11 +51,11 @@ $(function($){
 //booking room
 $(function($){
 	let count = 0;
-	$('.tabs tr:odd td').on('click', function(){
-		count++;
-
+	$('.tabs table').on('click', 'td', function(){
+		
 		if(!($(this).hasClass('book')) && 
 			 !($(this).hasClass('select-room'))){
+			count++;
 			if(count < 2){
 				$(this).addClass('select-room');
 			}
