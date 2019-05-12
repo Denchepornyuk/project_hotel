@@ -82,6 +82,8 @@
 			text-align: center
 			width: 40%
 			height: 50%
+			top: 25%
+			left: 30%
 			font-size: 20px
 			border-radius: $border
 			background-image: url("../img/background/background.jpg")
@@ -118,21 +120,23 @@
 			padding-top: 40px
 			font-size: 25px
 
-	.services-information
-		max-height: 95%
+		.services-information
+			max-height: 95%
 
+			&_block
+				max-height: 33%
 
-		&_block
-			max-height: 33%
+			.beauty-salon,
+			.parking
+				top: 15%
 			
-		
-		.beauty-salon,
-		.parking
-			top: 10%
+			.transfer,
+			.wardrobe
+				top: 35%
 
-		.businss-center,
-		.wi-fi
-			bottom: 10%
+			.businss-center,
+			.wi-fi
+				top: 55%
 
 
 @media (max-width: 991px)
@@ -142,9 +146,10 @@
 			color: #FFFF00
 			border: 1px solid #FFFF00
 			+bolt
-	.services-information
-		&_block
-			min-width: 60%
+		.services-information
+			&_block
+				min-width: 60%
+				left: 20%
 			
 
 @media (max-width: 768px)
@@ -155,28 +160,28 @@
 
 		&-list
 			flex-direction: column
-	.services-information
-		&_block
-			min-width: 360px
-			max-height: 17%
-		
-		.beauty-salon
-			top: -4.5%
+		.services-information
+			&_block
+				min-width: 360px
+				max-height: 17%
+				left: 24%
+			
+			.beauty-salon
+				top: -2.5%
 
-		.parking
-			top: 12%
+			.parking
+				top: 13.5%
+			.transfer
+				top: 30%
 
-		.transfer
-			top: 28.5%
+			.wardrobe
+				top: 45.5%
 
-		.wardrobe
-			top: 45%
+			.businss-center
+				top: 61.5%
 
-		.businss-center
-			top: 61.5%
-
-		.wi-fi
-			top: 77.5%
+			.wi-fi
+				top: 77.5%
 
 @media (max-width: 650px)
 	.services
@@ -186,11 +191,11 @@
 			padding: 0
 	.services-list_description a
 			margin-top: 40px
-	.services-information
-		&_block
-			min-width: 305px
-			p
-				font-size: 15px
-		& .block__close
-			margin-right: 10%
-			margin-top: 3%
+		.services-information
+			&_block
+				min-width: 305px
+				p
+					font-size: 15px
+			& .block__close
+				margin-right: 10%
+				margin-top: 3%
