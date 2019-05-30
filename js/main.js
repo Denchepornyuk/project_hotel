@@ -13,22 +13,25 @@ $(window).scroll(function() {
 $(function($){
 	$(".js-links").on("click","a", function (event) {
 		event.preventDefault();
-		var id  = $(this).attr('href'),
+		let id  = $(this).attr('href'),
 		top = $(id).offset().top;
 		$('body,html').animate({scrollTop: top}, 500);
 	});
 });
 
 //automatic flipping of pictures
-setInterval(function(){
-	let inputs = $('.hero').find('input');
-	let next = inputs.filter(":checked").next('input');
-	if (next.length){ 
-		next.prop('checked', true);
-	}
-	else 
-		inputs.first().prop('checked', true);
-}, 4000);
+
+$(function($){
+	setInterval(function(){
+		let inputs = $('.hero input');
+		let next = inputs.filter(":checked").next('input');
+		if (next.length){ 
+			next.prop('checked', true);
+		}
+		else 
+			inputs.first().prop('checked', true);
+	}, 4000);
+});
 
 //modal window add comment
 $(function($){
